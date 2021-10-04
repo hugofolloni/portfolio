@@ -1,4 +1,8 @@
 import profile from "./assets/profile.jpeg"
+import github from "./assets/github.svg"
+import linkedin from "./assets/linkedin.svg"
+import twitter from "./assets/twitter.svg"
+import instagram from "./assets/instagram.svg"
 
 const Home = () => {
     return ( 
@@ -17,6 +21,12 @@ const Home = () => {
             <div className="right">
                 <div className="profile-pic">
                     <img src={ profile } alt="profile-pic"/>
+                    <div className="links-home">
+                        <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
+                        <a href="https://linkedin.com/in/hugofolloni"><img src={ linkedin } alt="gh"/></a>
+                        <a href="https://twitter.com/hugofolloni"><img src={ twitter } alt="gh"/></a>
+                        <a href="https://instagram.com/hugofolloni"><img src={ instagram } alt="gh"/></a>
+                    </div>
                     <div className="background-circle"></div>
                 </div>
             </div>

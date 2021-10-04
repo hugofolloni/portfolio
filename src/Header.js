@@ -5,8 +5,8 @@ const Header = () => {
                 <h3>hugofolloni</h3>
             </div>
             <div className="right">
-                <a href="/">Works</a>
                 <a href="/">Skills</a>
+                <a href="/">Works</a>
                 <a href="/">Contact</a>
             </div>
         </div>
