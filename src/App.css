@@ -152,6 +152,11 @@ body {
     width: 80vw;
     background-color: white;
     border-radius: 2vw;
+    transition: 0.3s ease all;
+}
+
+.content:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .content .title {
@@ -186,7 +191,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 80px;
-    justify-content: center;
+    justify-content: baseline;
     text-align: center;
     align-items: center;
     transition: 0.3s ease all;
