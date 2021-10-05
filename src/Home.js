@@ -6,7 +6,40 @@ import instagram from "./assets/instagram.svg"
 import { HashLink } from 'react-router-hash-link';
 
 const Home = () => {
+    return ( 
+        <div className="home" id='home'>
+            <div className="left">
+                <div className="title">
+                    <h1>Hugo <br/> Folloni</h1>
+                </div>
+                <div className="description">
+                    <h3>Desenvolvedor frontend buscando crescer como pessoa e profissional.</h3>
+                </div>
+                <div className="button-hire-me">
+                <HashLink className='button' smooth to="/#contact">Contato</HashLink>
+                </div>
+            </div>
+            <div className="right">
+                <div className="profile-pic">
+                    <img src={ profile } alt="profile-pic"/>
+                    <div className="links-home">
+                        <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
+                        <a href="https://linkedin.com/in/hugofolloni"><img src={ linkedin } alt="gh"/></a>
+                        <a href="https://twitter.com/hugofolloni"><img src={ twitter } alt="gh"/></a>
+                        <a href="https://instagram.com/hugofolloni"><img src={ instagram } alt="gh"/></a>
+                    </div>
+                    <div className="background-circle"></div>
+                </div>
+            </div>
+        </div>
+     );
+}
 
+
+// // // // // // //
+
+
+const EnHome = () => {
     return ( 
         <div className="home" id='home'>
             <div className="left">
@@ -35,8 +68,5 @@ const Home = () => {
         </div>
      );
 }
- 
-export default Home;
-<div className="home">
 
-</div>
+export { Home, EnHome };

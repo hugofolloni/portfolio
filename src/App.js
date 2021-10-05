@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './Header';
-import Home from './Home';
-import Aboutme from './Aboutme';
-import Skills from "./Skills"
-import Works from "./Works"
-import Contact from "./Contact"
+import { Header, EnHeader }  from './Header';
+import { Home, EnHome } from './Home';
+import { Aboutme, EnAboutme } from './Aboutme';
+import { Skills, EnSkills } from "./Skills"
+import { Works, EnWorks } from "./Works"
+import { Contact, EnContact } from "./Contact"
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -12,14 +12,22 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Header />
       <Switch>
-        <Route exath path="/">
+        <Route exact path="/">
+          <Header />
           <Home/>
           <Aboutme/>
           <Skills/>
           <Works/>
           <Contact />
+        </Route>
+        <Route path="/english">
+          <EnHeader />  
+          <EnHome/>
+          <EnAboutme/>
+          <EnSkills/>
+          <EnWorks/>
+          <EnContact />
         </Route>
       </Switch>
     </div>

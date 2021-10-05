@@ -8,6 +8,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
 body {
@@ -37,7 +38,7 @@ body {
 
 
 .header .right {
-    width: 18%;
+    width: 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,6 +54,15 @@ body {
     color: #5b3be9;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+.header .right img {
+    width: 25px;
+    transition: 0.5s ease-in-out all;
+}
+
+.header .right img:hover {
+    transform: rotate(180deg);
 }
 
 .home {
@@ -192,7 +202,7 @@ body {
 
 .content-list {
     display: flex;
-    width: 70%;
+    width: 100%;
     justify-content: space-around;
     flex-direction: row;
     margin-top: 15px;
