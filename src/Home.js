@@ -3,8 +3,10 @@ import github from "./assets/github.svg"
 import linkedin from "./assets/linkedin.svg"
 import twitter from "./assets/twitter.svg"
 import instagram from "./assets/instagram.svg"
+import { HashLink } from 'react-router-hash-link';
 
 const Home = () => {
+
     return ( 
         <div className="home" id='home'>
             <div className="left">
@@ -12,10 +14,10 @@ const Home = () => {
                     <h1>Hugo <br/> Folloni</h1>
                 </div>
                 <div className="description">
-                    <h3>Frontend developer trying to grow <br/>as a professional and person.</h3>
+                    <h3>Frontend developer trying to grow as a professional and person.</h3>
                 </div>
                 <div className="button-hire-me">
-                    <button>Contact me</button>
+                <HashLink className='button' smooth to="/#contact">Contact</HashLink>
                 </div>
             </div>
             <div className="right">

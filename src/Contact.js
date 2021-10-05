@@ -2,11 +2,20 @@ import github from "./assets/github.svg"
 import instagram from "./assets/instagram.svg"
 import twitter from "./assets/twitter.svg"
 import linkedin from "./assets/linkedin.svg"
+// import React, { useState } from "react";
 
+// const nodemailer = require('nodemailer');
+
+require("dotenv").config();
 
 const Contact = () => {
 
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [message, setMessage] = useState('');
+    
     // const handleSubmit = () => {
+    //     console.log(name, email, message);    
     //     var transporter = nodemailer.createTransport({
     //         service: 'gmail',
     //         auth: {
@@ -17,16 +26,16 @@ const Contact = () => {
       
     //       var mailOptions = {
     //         from: 'hugofollonidev@gmail.com',
-    //         to: data.email,
-    //         subject: 'My portfolio website is working now!',
-    //         text: 'Essa é somente uma mensagem de testes, no futuro isso funcionará de verdade!'
+    //         to: 'hugofollogua07@gmail.com',
+    //         subject: `New message from ${name}`,
+    //         text: `Você tem uma nova mensagem vinda de seu site-portfólio!\nNome: ${name}\nEmail: ${email}\nMessage: ${message}`
     //       };
       
     //       transporter.sendMail(mailOptions, function(error, info){
     //         if (error) {
     //           console.log(error);
     //         } else {
-    //           console.log('Email sent to ' + data.email + ':' + info.response);
+    //           console.log('Email sent by ' + name + "-" + email + ':' + info.response);
     //         }
     //       });
     // }
@@ -45,24 +54,24 @@ const Contact = () => {
                     <a href="https://instagram.com/hugofolloni"><img src={ instagram } alt="gh"/></a>
                 </div>
             </div>
-            <div className="form">
+            {/* <div className="form">
                 <h3>Or send me an email</h3>
                 <div className="name-div">
                     <h4>Your name</h4>
-                    <input type="text" placeholder='Name'/>
+                    <input type="text" placeholder='Name' onChange={ (e) => setName(e.target.value) }/>
                 </div>
                 <div className="email-div">
                     <h4>Your email</h4>
-                    <input type="text" placeholder='Email'/>
+                    <input type="text" placeholder='Email' onChange={ (e) => setEmail(e.target.value) }/>
                 </div>
                 <div className="text-div">
                     <h4>Your message</h4>
-                    <textarea placeholder='Message' cols="30" rows="10"></textarea>
+                    <textarea placeholder='Message' cols="30" rows="10" onChange={ (e) => setMessage(e.target.value) }></textarea>
                 </div>
                 <div className="button-div">
-                    <button className='submit-button'>Submit</button>
+                    <button className='submit-button' onClick={ handleSubmit }>Submit</button>
                 </div>
-            </div>
+            </div> */}
         </div> 
     );
 }
