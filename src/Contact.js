@@ -4,12 +4,10 @@ import twitter from "./assets/twitter.svg"
 import linkedin from "./assets/linkedin.svg"
 import React, { useState } from "react";
 
-// const nodemailer = require('nodemailer');
 
 require("dotenv").config();
 
 const Contact = () => {
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -69,6 +67,7 @@ const EnContact = () => {
         console.log(name, email, message)
         window.location.href = `mailto:hugofollogua07@gmail.com?subject=Message%20from%20${name}&body=Name%20=%20${name}%0aEmail%20=%20${email}%0aMessage%20=%20${message}`
     }
+
 
     return ( 
         <div className="content" id='contact'>

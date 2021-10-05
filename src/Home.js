@@ -6,6 +6,7 @@ import instagram from "./assets/instagram.svg"
 import { HashLink } from 'react-router-hash-link';
 
 const Home = () => {
+
     return ( 
         <div className="home" id='home'>
             <div className="left">
@@ -16,7 +17,7 @@ const Home = () => {
                     <h3>Desenvolvedor frontend buscando crescer como pessoa e profissional.</h3>
                 </div>
                 <div className="button-hire-me">
-                <HashLink className='button' smooth to="/#contact">Contato</HashLink>
+                    <HashLink className='button' smooth to="/#contact">Contato</HashLink>
                 </div>
             </div>
             <div className="right">
