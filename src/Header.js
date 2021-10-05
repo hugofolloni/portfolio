@@ -1,6 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
-import usFlag from "./assets/usFlag.png"
 import brFlag from "./assets/brFlag.png"
+import uksFlag from "./assets/uksFlag.png"
 
 const Header = () => {    
     return ( 
@@ -12,7 +12,7 @@ const Header = () => {
                 <HashLink smooth to='/#skills'>Skills</HashLink>
                 <HashLink smooth to="/#works">Works</HashLink>
                 <HashLink smooth to="/#contact">Contato</HashLink>
-                <a href='/english'><img src={ usFlag } alt="" /></a>
+                <a href='/english'><img src={ uksFlag } alt="" /></a>
             </div>
         </div>
      );

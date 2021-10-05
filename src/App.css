@@ -143,6 +143,11 @@ body {
     border-radius: 50%;
     margin: 0% 10%;    
     margin-top: 3vh;
+    transition: all ease-in-out 10s;
+}
+
+.profile-pic img:hover{
+    transform: rotate(720deg);
 }
 
 .home .links-home img {
@@ -211,7 +216,7 @@ body {
 .content-item {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 200px;
     justify-content: baseline;
     text-align: center;
     align-items: center;

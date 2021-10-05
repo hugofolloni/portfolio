@@ -72,7 +72,7 @@ const EnWorks = () => {
                     <div className="project">
                         <h4>CITY WEATHER</h4>
                         <img src={ cityweather } alt="" />
-                        <p>A website that displays the current weather of any place on earth. Made with React and some APIs, user can search any location, even automactilly his own location.</p>
+                        <p>A website that displays the current weather of any place on earth. Made with React and some APIs, user can search any location, even auto-search his own location.</p>
                         <a href='https://github.com/hugofolloni/city-weather'>Github</a>
                     </div>
                     <div className="project">
