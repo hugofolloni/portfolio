@@ -75,6 +75,10 @@ body {
     margin-left: 3%;
 }
 
+.home .description {
+    width: 80%;
+}
+
 .home  .description h3 {
     color: #140b2b;
     font-weight: 300;
@@ -82,14 +86,17 @@ body {
     margin-top: 2vh;
 }
 
-.home  .button-hire-me button {
+.home .button-hire-me .button {
     background-color: #8063ff;
     border: none;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    height: 1vh;
+    width: 5vw;
+    font-size: 14px;
+    text-decoration: none;
     border-radius: 6px;
     margin-top: 3vh;
     color: #eaeaea;
@@ -98,7 +105,7 @@ body {
     transition: all ease-in-out 0.3s;
 }
 
-.home .button-hire-me button:hover{
+.home .button-hire-me .button:hover{
     background-color: #5b3be9;
     letter-spacing: 0.5px;
 }
