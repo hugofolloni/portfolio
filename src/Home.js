@@ -6,13 +6,13 @@ import instagram from "./assets/instagram.svg"
 
 const Home = () => {
     return ( 
-        <div className="home">
+        <div className="home" id='home'>
             <div className="left">
                 <div className="title">
                     <h1>Hugo <br/> Folloni</h1>
                 </div>
                 <div className="description">
-                    <h3>Desenvolvedor front-end web em busca <br/> de crescimento pessoal e profissional.</h3>
+                    <h3>Frontend developer trying to grow <br/>as a professional and person.</h3>
                 </div>
                 <div className="button-hire-me">
                     <button>Contact me</button>

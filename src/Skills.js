@@ -15,7 +15,7 @@ import learn from "./assets/learn.svg"
 const Skills = () => {
 
     return ( 
-        <div className="content">
+        <div className="content" id='skills'>
             <div className="title">
                 <h2>SKILLS</h2>
             </div>
@@ -54,7 +54,7 @@ const Skills = () => {
                         <p>Communication</p>
                     </div>
                     <div className="content-item">
-                        <img src={ problem } alt="" />
+                        <img className='bigger-img' src={ problem } alt="" />
                         <p>Critical Thinking</p>
                     </div>
                     <div className="content-item">
