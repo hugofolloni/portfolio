@@ -86,7 +86,7 @@ body {
 }
 
 .home .description {
-    width: 80%;
+    width: 85%;
 }
 
 .home  .description h3 {
@@ -143,10 +143,13 @@ body {
     border-radius: 50%;
     margin: 0% 10%;    
     margin-top: 3vh;
+}
+
+.profile-img {
     transition: all ease-in-out 10s;
 }
 
-.profile-pic img:hover{
+.profile-img:hover{
     transform: rotate(720deg);
 }
 

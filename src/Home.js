@@ -14,7 +14,7 @@ const Home = () => {
                     <h1>Hugo <br/> Folloni</h1>
                 </div>
                 <div className="description">
-                    <h3>Desenvolvedor frontend buscando crescer como pessoa e profissional.</h3>
+                    <h3>Desenvolvedor frontend buscando crescer pessoal e profissionalmente.</h3>
                 </div>
                 <div className="button-hire-me">
                     <HashLink className='button' smooth to="/#contact">Contato</HashLink>
@@ -22,7 +22,7 @@ const Home = () => {
             </div>
             <div className="right">
                 <div className="profile-pic">
-                    <img src={ profile } alt="profile-pic"/>
+                    <img className='profile-img' src={ profile } alt="profile-pic"/>
                     <div className="links-home">
                         <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
                         <a href="https://linkedin.com/in/hugofolloni"><img src={ linkedin } alt="gh"/></a>
@@ -48,7 +48,7 @@ const EnHome = () => {
                     <h1>Hugo <br/> Folloni</h1>
                 </div>
                 <div className="description">
-                    <h3>Frontend developer trying to grow as a professional and person.</h3>
+                    <h3>Frontend developer trying to grow as a professional and as a person.</h3>
                 </div>
                 <div className="button-hire-me">
                 <HashLink className='button' smooth to="/#contact">Contact</HashLink>
@@ -56,7 +56,7 @@ const EnHome = () => {
             </div>
             <div className="right">
                 <div className="profile-pic">
-                    <img src={ profile } alt="profile-pic"/>
+                    <img className='profile-img' src={ profile } alt="profile-pic"/>
                     <div className="links-home">
                         <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
                         <a href="https://linkedin.com/in/hugofolloni"><img src={ linkedin } alt="gh"/></a>
