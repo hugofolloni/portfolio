@@ -13,8 +13,9 @@ const SetTheme = () => {
         localStorage.getItem('theme') === null ? setTheme('light') : setTheme(localStorage.getItem('theme'));
     })
 
+    var newTheme;
+
     const themeToggler = () => {
-        var newTheme;
         theme === 'light' ? newTheme = 'dark' : newTheme = 'light';
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);

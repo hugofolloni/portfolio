@@ -27,7 +27,7 @@ const Home = () => {
             <div className="right">
                 <div className="profile-pic">
                     <div className="mobile-links">
-                        <a href='/english'><img src={ uksFlag } alt="" /></a>
+                        <a className='flags' href='/english'><img src={ uksFlag } alt="" /></a>
                         <SetTheme />
                     </div>
                     <img className='profile-img' src={ profile } alt="profile-pic"/>
@@ -65,7 +65,7 @@ const EnHome = () => {
             <div className="right">
                 <div className="profile-pic">
                     <div className="mobile-links">
-                        <a className='mobile-links-content' href='../'><img src={ brFlag } alt="" /></a>
+                        <a className='flags' href='../'><img src={ brFlag } alt="" /></a>
                         <SetTheme className='mobile-links-content' />
                     </div>
                     <img className='profile-img' src={ profile } alt="profile-pic"/>

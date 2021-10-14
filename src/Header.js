@@ -13,7 +13,7 @@ const Header = () => {
                 <HashLink smooth to='/#skills'>Skills</HashLink>
                 <HashLink smooth to="/#works">Works</HashLink>
                 <HashLink smooth to="/#contact">Contato</HashLink>
-                <a href='/english'><img src={ uksFlag } alt="" /></a>
+                <a className='flags' href='/english'><img src={ uksFlag } alt="" /></a>
                 <SetTheme />
             </div>
         </div>
