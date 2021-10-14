@@ -10,3 +10,8 @@ It's a portfolio page, where the user can see infos about me, my "about me" sect
 - CSS
 
 ## 🎨 UI
+### Desktop users
+![image](https://user-images.githubusercontent.com/82226141/137396632-81f6bc6a-4983-46a7-81dd-721a2100dbb6.png)
+
+### Mobile users
+![image](https://user-images.githubusercontent.com/82226141/137396742-e6529e64-0bb9-415f-997d-7bd3bcaa624a.png)
