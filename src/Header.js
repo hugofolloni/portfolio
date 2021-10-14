@@ -1,6 +1,7 @@
 import { HashLink } from 'react-router-hash-link';
 import brFlag from "./assets/brFlag.png"
 import uksFlag from "./assets/uksFlag.png"
+import SetTheme from './SetTheme';
 
 const Header = () => {    
     return ( 
@@ -13,6 +14,7 @@ const Header = () => {
                 <HashLink smooth to="/#works">Works</HashLink>
                 <HashLink smooth to="/#contact">Contato</HashLink>
                 <a href='/english'><img src={ uksFlag } alt="" /></a>
+                <SetTheme />
             </div>
         </div>
      );
@@ -33,6 +35,7 @@ const EnHeader = () => {
                 <HashLink smooth to="#works">Works</HashLink>
                 <HashLink smooth to="#contact">Contact</HashLink>
                 <a href='../'><img src={ brFlag } alt="" /></a>
+                <SetTheme />
             </div>
         </div>
      );
