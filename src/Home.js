@@ -5,6 +5,10 @@ import twitter from "./assets/twitter.svg"
 import instagram from "./assets/instagram.svg"
 import { HashLink } from 'react-router-hash-link';
 
+import brFlag from "./assets/brFlag.png"
+import uksFlag from "./assets/uksFlag.png"
+import SetTheme from './SetTheme';
+
 const Home = () => {
 
     return ( 
@@ -22,6 +26,10 @@ const Home = () => {
             </div>
             <div className="right">
                 <div className="profile-pic">
+                    <div className="mobile-links">
+                        <a href='/english'><img src={ uksFlag } alt="" /></a>
+                        <SetTheme />
+                    </div>
                     <img className='profile-img' src={ profile } alt="profile-pic"/>
                     <div className="links-home">
                         <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
@@ -56,6 +64,10 @@ const EnHome = () => {
             </div>
             <div className="right">
                 <div className="profile-pic">
+                    <div className="mobile-links">
+                        <a className='mobile-links-content' href='../'><img src={ brFlag } alt="" /></a>
+                        <SetTheme className='mobile-links-content' />
+                    </div>
                     <img className='profile-img' src={ profile } alt="profile-pic"/>
                     <div className="links-home">
                         <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>

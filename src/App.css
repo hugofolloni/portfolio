@@ -120,6 +120,13 @@ html {
     letter-spacing: 0.5px;
 }
 
+.mobile-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
 .home .right{
     display: flex;
     width: 50vw;
@@ -138,7 +145,7 @@ html {
     justify-content: space-around;
 }
 
-.home .profile-pic img{
+.home .profile-img{
     width: 30vw;
     border-radius: 50%;
     margin: 0% 10%;    
@@ -254,9 +261,6 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-.row {
     margin-top: 40px;
 }
 
@@ -370,4 +374,128 @@ html {
 
 .social-medias-links img:hover {
     filter: invert(22%) sepia(99%) saturate(3875%) hue-rotate(248deg) brightness(93%) contrast(96%);
+}
+
+@media (max-width: 800px) {
+    .form {
+      display: none;
+    }
+
+    body{
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .works
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .content-list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        height: 20vh;
+        align-items: center;
+    }
+
+    .mobile-row:first-child{
+        margin-top: 5vh;
+    }
+
+    .mobile-row div {
+        width: 33%;
+        text-align: center;
+    }
+    
+    .mobile-row div:nth-child(2){
+        margin-top: -20vh;
+    }
+    .home .button-hire-me .button {
+        padding: 5vw 10vw;
+    }
+
+    .content {
+        width: 75vw;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .header .right{
+        display: none;
+    }
+
+    .home .background-circle{
+        height: 50vw;
+    }
+
+    .home{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home .right{
+        margin-top: 30vh;
+    }
+
+    .home .links-home{
+        display: none;
+
+    }
+
+    .home .background-circle {
+        clip-path: circle(40% at 100% 100%);
+    }
+    
+    .project{
+        margin: 2vh 0vh;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .content .title {
+        margin-bottom: 0vh;
+    }
+
+    .social-medias-links {
+        display: flex;
+        width: 92%;
+        justify-content: space-around;
+    }
+
+    .social-medias-links img {
+        width: 40px;
+    }
+
+    .mobile-links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -3vh;
+        margin-right: -5vw;
+    }
+
+    .mobile-links img{
+        width: 40px;
+    }
+
+  }
+
+  @media (min-width: 800px) {
+    .mobile-links{
+        display: none;
+    }
 }

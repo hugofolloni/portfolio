@@ -21,56 +21,65 @@ const Skills = () => {
             <div className="skills-content">
                 <h4>Development Skills</h4>
                 <div className="content-list">
-                    <div className="content-item">
-                        <img src={html} alt="" />
-                        <p>HTML</p>
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={html} alt="" />
+                            <p>HTML</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={css} alt="" />
+                            <p>CSS</p>
+                        </div> 
+                        <div className="content-item">
+                            <img src={javascript} alt="" />
+                            <p>JavaScript</p>
+                        </div> 
                     </div>
-                    <div className="content-item">
-                        <img src={css} alt="" />
-                        <p>CSS</p>
-                    </div> 
-                    <div className="content-item">
-                        <img src={javascript} alt="" />
-                        <p>JavaScript</p>
-                    </div> 
-                    <div className="content-item">
-                        <img src={react} alt="" />
-                        <p>React</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={node} alt="" />
-                        <p>Node.js</p>
-                    </div> 
-                    <div className="content-item">
-                        <img src={python} alt="" />
-                        <p>Python</p>
+
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={react} alt="" />
+                            <p>React</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={node} alt="" />
+                            <p>Node.js</p>
+                        </div> 
+                        <div className="content-item">
+                            <img src={python} alt="" />
+                            <p>Python</p>
+                        </div>
                     </div>
                 </div>
                 <h4 className='soft-skills-label'>Soft Skills</h4>
                 <div className="content-list">
-                    <div className="content-item">
-                        <img src={ comms } alt="" />
-                        <p>Comunicação</p>
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={ comms } alt="" />
+                            <p>Comunicação</p>
+                        </div>
+                        <div className="content-item">
+                            <img className='bigger-img' src={ problem } alt="" />
+                            <p>Pensamento racional</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={ learn } alt="" />
+                            <p>Autodidata</p>
+                        </div>
                     </div>
-                    <div className="content-item">
-                        <img className='bigger-img' src={ problem } alt="" />
-                        <p>Pensamento racional</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ learn } alt="" />
-                        <p>Autodidata</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ team } alt="" />
-                        <p>Trabalho em grupo</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ adaptability } alt="" />
-                        <p>Adaptabilidade</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ time } alt="" />
-                        <p>Gerenciamento de tempo</p>
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={ team } alt="" />
+                            <p>Trabalho em grupo</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={ adaptability } alt="" />
+                            <p>Adaptabilidade</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={ time } alt="" />
+                            <p>Gerenciamento de tempo</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,56 +100,65 @@ const EnSkills = () => {
             <div className="skills-content">
                 <h4>Development Skills</h4>
                 <div className="content-list">
-                    <div className="content-item">
-                        <img src={html} alt="" />
-                        <p>HTML</p>
+                <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={html} alt="" />
+                            <p>HTML</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={css} alt="" />
+                            <p>CSS</p>
+                        </div> 
+                        <div className="content-item">
+                            <img src={javascript} alt="" />
+                            <p>JavaScript</p>
+                        </div> 
                     </div>
-                    <div className="content-item">
-                        <img src={css} alt="" />
-                        <p>CSS</p>
-                    </div> 
-                    <div className="content-item">
-                        <img src={javascript} alt="" />
-                        <p>JavaScript</p>
-                    </div> 
-                    <div className="content-item">
-                        <img src={react} alt="" />
-                        <p>React</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={node} alt="" />
-                        <p>Node.js</p>
-                    </div> 
-                    <div className="content-item">
-                        <img src={python} alt="" />
-                        <p>Python</p>
+
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={react} alt="" />
+                            <p>React</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={node} alt="" />
+                            <p>Node.js</p>
+                        </div> 
+                        <div className="content-item">
+                            <img src={python} alt="" />
+                            <p>Python</p>
+                        </div>
                     </div>
                 </div>
                 <h4 className='soft-skills-label'>Soft Skills</h4>
                 <div className="content-list">
-                    <div className="content-item">
-                        <img src={ comms } alt="" />
-                        <p>Communication</p>
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={ comms } alt="" />
+                            <p>Communication</p>
+                        </div>
+                        <div className="content-item">
+                            <img className='bigger-img' src={ problem } alt="" />
+                            <p>Critical Thinking</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={ learn } alt="" />
+                            <p>Self Learning</p>
+                        </div>
                     </div>
-                    <div className="content-item">
-                        <img className='bigger-img' src={ problem } alt="" />
-                        <p>Critical Thinking</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ learn } alt="" />
-                        <p>Self Learning</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ team } alt="" />
-                        <p>Team Playing</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ adaptability } alt="" />
-                        <p>Adaptability</p>
-                    </div>
-                    <div className="content-item">
-                        <img src={ time } alt="" />
-                        <p>Time Management</p>
+                    <div className="mobile-row">
+                        <div className="content-item">
+                            <img src={ team } alt="" />
+                            <p>Team Playing</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={ adaptability } alt="" />
+                            <p>Adaptability</p>
+                        </div>
+                        <div className="content-item">
+                            <img src={ time } alt="" />
+                            <p>Time Management</p>
+                        </div>
                     </div>
                 </div>
             </div>
