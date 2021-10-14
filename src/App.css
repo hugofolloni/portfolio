@@ -11,9 +11,7 @@ html {
     scroll-behavior: smooth;
   }
 
-body {
-    background-image: radial-gradient(circle , rgb(248, 247, 247), #eaeaea);
-}
+
 
 .header  {
     display: flex;
@@ -21,7 +19,6 @@ body {
     justify-content: space-around;
     height: 9vh;
     align-items: center;
-    background-color: white;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -32,9 +29,6 @@ body {
     text-decoration: none;
 }
 
-.page-title h3 {
-    color: #8063ff;
-}
 
 
 .header .right {
@@ -78,7 +72,6 @@ body {
     display: flex;
     flex-direction: row;
     padding-top: 6vh;
-    background-color: white;
 }
 
 .home .left {
@@ -89,7 +82,6 @@ body {
 }
 
 .home .title {
-    color: #28196b;
     font-size: 32px;
     margin-left: 3%;
 }
@@ -99,7 +91,6 @@ body {
 }
 
 .home  .description h3 {
-    color: #140b2b;
     font-weight: 300;
     font-size: 16px;
     margin-top: 2vh;
@@ -188,7 +179,6 @@ body {
     margin: 5vw 7vw;
     padding: 3vw;
     width: 80vw;
-    background-color: white;
     border-radius: 2vw;
     transition: 0.3s ease all;
 }
@@ -281,9 +271,6 @@ body {
     transition: 0.3s ease-in all;
 }
 
-.project:hover {
-    box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
-}
 
 .project h4 {
     margin-top: 30px;
@@ -334,7 +321,6 @@ body {
     margin-left: 5%;
     padding: 10px;
     outline: none;
-    background-color: #eaeaea;
     margin-top: 5px;
     border: none;
     border-radius: 6px;

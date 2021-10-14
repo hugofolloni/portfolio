@@ -7,9 +7,17 @@ import halfSunMoon from "./assets/halfSunMoon.png";
 
 const SetTheme = () => {
 
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('light');
+
+    window.addEventListener("load", () => {
+        localStorage.getItem('theme') === null ? setTheme('light') : setTheme(localStorage.getItem('theme'));
+    })
+
     const themeToggler = () => {
-        theme === 'dark' ? setTheme('light') : setTheme('dark')
+        var newTheme;
+        theme === 'light' ? newTheme = 'dark' : newTheme = 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
     }
 
     return ( 
