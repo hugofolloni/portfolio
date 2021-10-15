@@ -42,7 +42,7 @@ const Works = () => {
                     <div className="project">
                         <h4>LANDING PAGE</h4>
                         <img src={ landing } alt="" />
-                        <p>É uma página para "ainda em construção" com um input (feito em react), além de um backend/banco de dados (feitos com Node.js) para enviar emails quanto estiver pronto.</p>
+                        <p>É uma página para "ainda em construção" com um input (feito em react), além de um backend/banco de dados (feitos com Node.js) para enviar emails quando estiver pronto.</p>
                         <a href='https://github.com/hugofolloni/landing-page'>Github</a>
                     </div>
                     <div className="project">

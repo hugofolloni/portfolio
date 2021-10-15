@@ -296,6 +296,7 @@ html {
     transition: 0.3s ease all;
     margin-top: 20px;
     margin-left: -40%;
+    margin-bottom: 20px;
 }
 
 .project a:hover{

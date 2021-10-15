@@ -7,7 +7,7 @@ const Aboutme = () => {
             <div className="infos-about-me">
                 <p>Olá, eu sou Hugo Folloni Guarilha e sou um programador brasileiro de 18 anos. Amo tecnologias e desenvolvimento de ideias desde a minha infância, mas em 2017 comecei a codar de fato. Meus primeiros aplicativos foram em Python, ainda no ensino médio. Depois disso, comecei a focar no desenvolvimento web, com Javascript e HTML/CSS. Em julho de 2021, comecei a estudar React, e estou atualmente procurando oportundidades na área.</p>
                 <br />
-                <p>Sou um programador autodidata, mas agora estou estudando Ciência da Computação na UFRJ, uma das universidades mais prestigiadas do Brasil. Minha perseverança e habilidade de aprender sozinho são talvez minhas características preferidas sobre mim, e vão me manter focado em me desenvolver como profissional.</p>
+                <p>Sou um programador autodidata, mas agora curso a faculdade de Ciência da Computação na UFRJ, uma das universidades mais prestigiadas do Brasil. Minha perseverança e habilidade de aprender sozinho são talvez minhas características preferidas sobre mim, e vão me manter focado em me desenvolver como profissional.</p>
             </div>
         </div>
      );
