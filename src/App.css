@@ -225,7 +225,7 @@ html {
 .content-item {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 220px;
     justify-content: baseline;
     text-align: center;
     align-items: center;
@@ -265,7 +265,7 @@ html {
 }
 
 .project {
-    height: 350px;
+    height: 380px;
     width: 300px;
     border-radius: 20%;
     background-color: #eaeaea;
@@ -296,7 +296,7 @@ html {
     transition: 0.3s ease all;
     margin-top: 20px;
     margin-left: -40%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .project a:hover{
@@ -493,9 +493,9 @@ html {
         width: 40px;
     }
 
-  }
+}
 
-  @media (min-width: 800px) {
+@media (min-width: 800px) {
     .mobile-links{
         display: none;
     }
