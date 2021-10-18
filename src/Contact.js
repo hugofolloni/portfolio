@@ -46,7 +46,7 @@ const Contact = () => {
                     <textarea placeholder='Message' cols="30" rows="10" onChange={ (e) => setMessage(e.target.value) }></textarea>
                 </div>
                 <div className="button-div">
-                    <button className='submit-button' onClick={ handleSubmit }>Submit</button>
+                    <button className='submit-button' onClick={ handleSubmit }>Enviar</button>
                 </div>
             </div>
         </div> 
