@@ -225,7 +225,7 @@ html {
 .content-item {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    width: 160px;
     justify-content: baseline;
     text-align: center;
     align-items: center;
