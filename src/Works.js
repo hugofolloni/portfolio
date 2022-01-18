@@ -3,7 +3,6 @@ import heyo from "./assets/heyo.jpg";
 import todo from "./assets/to-do.png";
 import coding from "./assets/coding.png"
 import landing from "./assets/landing.ico"
-import profile from "./assets/profile.jpeg"
 import gamedealer from "./assets/gamedealer.png"
 
 const Works = () => {

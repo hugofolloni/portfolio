@@ -24,7 +24,6 @@
     "styled-components": "^5.3.1",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://hugofolloni.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
