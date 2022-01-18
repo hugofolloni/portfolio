@@ -308,6 +308,14 @@ html {
     margin: 6px 0px;
 }
 
+.link-buttons {
+    width: 80%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .form {
     margin-top: 30px;
 }
@@ -387,6 +395,10 @@ html {
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .setTheme {
+        background-color: red;
     }
 
     .works
@@ -501,6 +513,3 @@ html {
     }
 }
 
-.flags{
-    display: none;
-}

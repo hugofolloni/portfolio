@@ -6,31 +6,24 @@ import "./App.css";
 import halfSunMoon from "./assets/halfSunMoon.png";
 
 const SetTheme = () => {
+    const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
 
-    const [theme, setTheme] = useState('light');
-
-    window.addEventListener("load", () => {
-        localStorage.getItem('theme') === null ? setTheme('light') : setTheme(localStorage.getItem('theme'));
-    })
-
-    var newTheme;
-
-    const themeToggler = () => {
-        theme === 'light' ? newTheme = 'dark' : newTheme = 'light';
-        setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
+    const toggleTheme = (currentTheme) => {
+        const nextTheme = currentTheme === "light" ? "dark" : "light";
+        setTheme(nextTheme);
+        localStorage.setItem('theme', nextTheme)
+        window.location.reload()
     }
-
+    
     return ( 
-        <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles/>
         <div className="setTheme-button">
-            <img src={ halfSunMoon } className='halfSunMoon' alt='halfSunMoon' onClick={ themeToggler } />
+            <img src={ halfSunMoon } className='halfSunMoon' alt='halfSunMoon' onClick={ () => toggleTheme(theme) } />
         </div>
         </ThemeProvider>
     );
+} 
 
-
-}
  
 export default SetTheme;
