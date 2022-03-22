@@ -15,22 +15,22 @@ html {
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: #5b3be9 #ffffff;
+    scrollbar-color: #5b3be9 #121212;
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
 
   *::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: rgba(0, 0, 0, 0.7);
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #5b3be9;
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    border: 1px solid  white;
   }
 
 
