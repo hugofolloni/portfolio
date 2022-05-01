@@ -1,7 +1,7 @@
 import cityweather from "./assets/city-weather.ico";
 import heyo from "./assets/heyo.jpg";
-import todo from "./assets/to-do.png";
-import coding from "./assets/coding.png"
+import anigme from "./assets/anigme.png";
+import wordzzz from "./assets/wordzzz.png"
 import landing from "./assets/landing.ico"
 import gamedealer from "./assets/gamedealer.png"
 
@@ -14,6 +14,24 @@ const Works = () => {
             <div className="works">
                 <div className="row">
                     <div className="project">
+                        <h4>WORD.ZZZ</h4>
+                        <img src={ wordzzz } alt="" />
+                        <p>Um jogo no qual o usuário deve acertar a palavra de 5, 6 ou 7 letras com base nos seus acertos e erros anteriores. Foi feito com React usando um banco de dados local com as palavras.</p>
+                        <div className="link-buttons">
+                            <a href="https://wordzzz.netlify.app">Projeto</a>
+                            <a href='https://github.com/hugofolloni/word.zzz'>Github</a>
+                        </div>
+                    </div>
+                    <div className="project">
+                        <h4>ANIGME</h4>
+                        <img src={ anigme } alt="" />
+                        <p>Uma mistura de anime com enigma, jogo no qual se deve acertar o personagem por trás da imagem borrada com base em seus erros anteriores. Usa uma API para os coletar as informações.</p>
+                        <div className="link-buttons">
+                            <a href="https://anigme.netlify.app">Projeto</a>
+                            <a href='https://github.com/hugofolloni/anigme'>Github</a>
+                        </div>
+                    </div>
+                    <div className="project">
                         <h4>CITY WEATHER</h4>
                         <img src={ cityweather } alt="" />
                         <p>Um website que mostra a atual condição climática de qualquer lugar do mundo. Foi feito com React e algumas APIs. O usuário pode buscar localizações ou ver a sua própria.</p>
@@ -22,6 +40,8 @@ const Works = () => {
                             <a href='https://github.com/hugofolloni/city-weather'>Github</a>
                         </div>
                     </div>
+                </div>
+                <div className="row">
                     <div className="project">
                         <h4>GAME DEALER</h4>
                         <img src={ gamedealer } alt="" />
@@ -37,25 +57,11 @@ const Works = () => {
                         <p>Um bot interativo e divertido para servidores do Discord. Foi feito com Node.js, especificamente Discord.js. Ele junta comandos de música, diversão e curiosidades.</p>
                         <a href='https://github.com/hugofolloni/heyo-discord-bot'>Github</a>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="project">
-                        <h4>50 DAYS OF CODE</h4>
-                        <img src={ coding } alt="" />
-                        <p>Um desafio de programar algo por 50 dias consecutivos. Ainda estou fazendo, e estou aprendendo muito no processo, ganhando confiança e criando rotinas.</p>
-                        <a href='https://github.com/hugofolloni/50-days-of-code-challenge'>Github</a>
-                    </div>
                     <div className="project">
                         <h4>LANDING PAGE</h4>
                         <img src={ landing } alt="" />
                         <p>É uma página para "ainda em construção" com um input (feito em react), além de um backend/banco de dados (feitos com Node.js) para enviar emails quando estiver pronto.</p>
                         <a href='https://github.com/hugofolloni/landing-page'>Github</a>
-                    </div>
-                    <div className="project">
-                        <h4>REACT TO-DO-LIST</h4>
-                        <img src={ todo } alt="" />
-                        <p>Uma to-do-list simples feita com React. Ela é uma lista de tarefas integrada com um relógio pomodoro, para controlar o tempo das tarefas de estudo/trabalho do usuário.</p>
-                        <a href='https://github.com/hugofolloni/react-to-do-list'>Github</a>
                     </div>
                 </div>
             </div>
@@ -76,6 +82,24 @@ const EnWorks = () => {
             <div className="works">
                 <div className="row">
                     <div className="project">
+                        <h4>WORD.ZZZ</h4>
+                        <img src={ wordzzz } alt="" />
+                        <p>A game which the player has to guess correctly the word with 5, 6 or 7 letters based on the last misses. Was made with React using a local database with the words.</p>
+                        <div className="link-buttons">
+                            <a href="https://wordzzz.netlify.app">Project</a>
+                            <a href='https://github.com/hugofolloni/word.zzz'>Github</a>
+                        </div>
+                    </div>
+                    <div className="project">
+                        <h4>ANIGME</h4>
+                        <img src={ anigme } alt="" />
+                        <p>A mix of enigma and anime, a game which the player has to guess the character behind the blur photo, based on the last misses. Uses an API to get the infos.</p>
+                        <div className="link-buttons">
+                            <a href="https://anigme.netlify.app">Project</a>
+                            <a href='https://github.com/hugofolloni/anigme'>Github</a>
+                        </div>
+                    </div>
+                    <div className="project">
                         <h4>CITY WEATHER</h4>
                         <img src={ cityweather } alt="" />
                         <p>A website that displays the current weather of any place on earth. Made with React and some APIs, user can search any location, even auto-search his own location.</p>
@@ -84,6 +108,8 @@ const EnWorks = () => {
                             <a href='https://github.com/hugofolloni/city-weather'>Github</a>
                         </div>
                     </div>
+                </div>
+                <div className="row">
                     <div className="project">
                         <h4>GAME DEALER</h4>
                         <img src={ gamedealer } alt="" />
@@ -99,25 +125,11 @@ const EnWorks = () => {
                         <p>An interactive and fun bot for discord servers. Made with Node.js, especially Discord.js. It runs in portuguese language, mixing music, fun and curiosity commands.</p>
                         <a href='https://github.com/hugofolloni/heyo-discord-bot'>Github</a>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="project">
-                        <h4>50 DAYS OF CODE</h4>
-                        <img src={ coding } alt="" />
-                        <p>A challenge to code something for the next 50 days. I still doing it, and I'm learning a lot during the process, getting confidence and code routine.</p>
-                        <a href='https://github.com/hugofolloni/50-days-of-code-challenge'>Github</a>
-                    </div>
                     <div className="project">
                         <h4>LANDING PAGE</h4>
                         <img src={ landing } alt="" />
                         <p>It's an "under construction" landing page with input field (made with React) and a database/backend (made with Node.js), to send emails when the page is ready.</p>
                         <a href='https://github.com/hugofolloni/landing-page'>Github</a>
-                    </div>
-                    <div className="project">
-                        <h4>REACT TO-DO-LIST</h4>
-                        <img src={ todo } alt="" />
-                        <p>A simple to-do list made with React. It is a to-do list with a pomodoro timer integrated where the user can control his tasks and time for study/work.</p>
-                        <a href='https://github.com/hugofolloni/react-to-do-list'>Github</a>
                     </div>
                 </div>
             </div>
