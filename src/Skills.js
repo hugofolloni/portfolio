@@ -60,11 +60,11 @@ const Skills = () => {
                         </div>
                         <div className="content-item">
                             <img className='bigger-img' src={ problem } alt="" />
-                            <p>Pensamento racional</p>
+                            <p>Pensamento crítico</p>
                         </div>
                         <div className="content-item">
                             <img src={ learn } alt="" />
-                            <p>Autodidata</p>
+                            <p>Curiosidade</p>
                         </div>
                     </div>
                     <div className="mobile-row">

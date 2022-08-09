@@ -24,13 +24,13 @@ html {
   }
 
   *::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.7);
+    background: #1c1c1c;
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #5b3be9;
     border-radius: 10px;
-    border: 1px solid  white;
+    border: 1px solid #1c1c1c;
   }
 
 
@@ -59,13 +59,13 @@ html {
     justify-content: space-between;
 }
 
-.header .right a {
+.header .right a, .infos-about-me a {
     text-decoration: none;
     color: #1c1c1c;
     transition: 0.3s ease-in-out all;
 }
 
-.header .right a:hover{
+.header .right a:hover, .infos-about-me a:hover{
     color: #5b3be9;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -93,6 +93,7 @@ html {
     display: flex;
     flex-direction: row;
     padding-top: 6vh;
+    width: 100vw;
 }
 
 .home .left {
@@ -105,6 +106,8 @@ html {
 .home .title {
     font-size: 32px;
     margin-left: 3%;
+    line-height: 70px;
+    letter-spacing: -2px;
 }
 
 .home .description {
@@ -124,8 +127,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1vh;
-    width: 5vw;
+    height: 2vh;
+    width: 8vw;
     font-size: 14px;
     text-decoration: none;
     border-radius: 6px;
@@ -144,13 +147,14 @@ html {
 .mobile-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
 }
 
 .home .right{
     display: flex;
-    width: 50vw;
+    width: 70vw;
+    position: relative;
 }
 
 .profile-pic{
@@ -160,14 +164,14 @@ html {
 
 .home .links-home {
     width: 20vw;
-    margin-left: 25vw;
+    margin-left: 30vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .home .profile-img{
-    width: 30vw;
+    width: 400px;
     border-radius: 50%;
     margin: 0% 10%;    
     margin-top: 3vh;
@@ -196,8 +200,9 @@ html {
     position: absolute;
     height: 100vh;
     width: 100vw;
-    margin-left: -47vw;
-    margin-top: -47.25vw;
+    right: 0;
+    bottom:0;
+    margin-right: -10vw;
     background: #5b3be9;
     clip-path: circle(40% at 90% 100%);
     z-index: -1;
@@ -246,12 +251,12 @@ html {
 .content-item {
     display: flex;
     flex-direction: column;
-    width: 160px;
+    width: 165px;
     justify-content: baseline;
     text-align: center;
     align-items: center;
     transition: 0.1s ease all;
-    cursor: pointer;
+    cursor: default;
 }
 
 .content-item:hover {
@@ -286,9 +291,9 @@ html {
 }
 
 .project {
-    height: 380px;
+    height: 420px;
     width: 300px;
-    border-radius: 20%;
+    border-radius: 40px;
     background-color: #eaeaea;
     display: flex;
     flex-direction: column;
@@ -327,6 +332,7 @@ html {
 .project img{
     width: 45px;
     margin: 6px 0px;
+    height: 45px;
 }
 
 .link-buttons {
@@ -394,7 +400,7 @@ html {
     display: flex;
     width: 50%;
     justify-content: space-around;
-    margin: 10px
+    margin: 10px;
 }
 
 .social-medias-links img {
@@ -422,7 +428,10 @@ html {
         background-color: red;
     }
 
-    .works
+    .home .profile-img{
+        width: 120px;
+        margin-top: 20px;
+    }
 
     .row {
         display: flex;

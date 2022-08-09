@@ -2,7 +2,9 @@ import profile from "./assets/profile.jpeg"
 import github from "./assets/github.svg"
 import linkedin from "./assets/linkedin.svg"
 import twitter from "./assets/twitter.svg"
+import newspaper from "./assets/newspaper-solid.svg"
 import instagram from "./assets/instagram.svg"
+import resume from "./assets/resume.pdf"
 import { HashLink } from 'react-router-hash-link';
 
 import brFlag from "./assets/brFlag.png"
@@ -15,10 +17,10 @@ const Home = () => {
         <div className="home" id='home'>
             <div className="left">
                 <div className="title">
-                    <h1>Hugo <br/> Folloni</h1>
+                    <h1>Hugo Folloni</h1>
                 </div>
                 <div className="description">
-                    <h3>Desenvolvedor frontend buscando crescer pessoal e profissionalmente.</h3>
+                    <h3>Desenvolvedor fullstack e estudante de Ciência da Computação.</h3>
                 </div>
                 <div className="button-hire-me">
                     <HashLink className='button' smooth to="/#contact">Contato</HashLink>
@@ -32,10 +34,11 @@ const Home = () => {
                     </div>
                     <img className='profile-img' src={ profile } alt="profile-pic"/>
                     <div className="links-home">
-                        <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
-                        <a href="https://linkedin.com/in/hugofolloni"><img src={ linkedin } alt="gh"/></a>
-                        <a href="https://twitter.com/hugofolloni"><img src={ twitter } alt="gh"/></a>
-                        <a href="https://instagram.com/hugofolloni"><img src={ instagram } alt="gh"/></a>
+                        <a href={resume} target='_blank'  rel="noreferrer"><img src={ newspaper } alt="gh"/></a>
+                        <a href="https://github.com/hugofolloni" target='_blank'  rel="noreferrer"><img src={ github } alt="gh" /></a>
+                        <a href="https://linkedin.com/in/hugofolloni" target='_blank'  rel="noreferrer"><img src={ linkedin } alt="gh"/></a>
+                        <a href="https://twitter.com/hugofolloni" target='_blank'  rel="noreferrer"><img src={ twitter } alt="gh"/></a>
+                        <a href="https://instagram.com/hugofolloni" target='_blank'  rel="noreferrer"><img src={ instagram } alt="gh"/></a>
                     </div>
                     <div className="background-circle"></div>
                 </div>
@@ -56,7 +59,7 @@ const EnHome = () => {
                     <h1>Hugo <br/> Folloni</h1>
                 </div>
                 <div className="description">
-                    <h3>Frontend developer trying to grow as a professional and as a person.</h3>
+                    <h3>Fullstack developer and Computer Science student.</h3>
                 </div>
                 <div className="button-hire-me">
                 <HashLink className='button' smooth to="/#contact">Contact</HashLink>
@@ -70,10 +73,10 @@ const EnHome = () => {
                     </div>
                     <img className='profile-img' src={ profile } alt="profile-pic"/>
                     <div className="links-home">
-                        <a href="https://github.com/hugofolloni"><img src={ github } alt="gh"/></a>
-                        <a href="https://linkedin.com/in/hugofolloni"><img src={ linkedin } alt="gh"/></a>
-                        <a href="https://twitter.com/hugofolloni"><img src={ twitter } alt="gh"/></a>
-                        <a href="https://instagram.com/hugofolloni"><img src={ instagram } alt="gh"/></a>
+                        <a href="https://github.com/hugofolloni" target='_blank'  rel="noreferrer"><img src={ github } alt="gh"/></a>
+                        <a href="https://linkedin.com/in/hugofolloni" target='_blank'  rel="noreferrer"><img src={ linkedin } alt="gh"/></a>
+                        <a href="https://twitter.com/hugofolloni" target='_blank'  rel="noreferrer"><img src={ twitter } alt="gh"/></a>
+                        <a href="https://instagram.com/hugofolloni" target='_blank'  rel="noreferrer"><img src={ instagram } alt="gh"/></a>
                     </div>
                     <div className="background-circle"></div>
                 </div>
