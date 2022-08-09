@@ -56,7 +56,7 @@ const Skills = () => {
                     <div className="mobile-row">
                         <div className="content-item">
                             <img src={ comms } alt="" />
-                            <p>Comunicação</p>
+                            <p>Inglês fluente</p>
                         </div>
                         <div className="content-item">
                             <img className='bigger-img' src={ problem } alt="" />
