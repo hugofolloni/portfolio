@@ -1,4 +1,5 @@
 import cityweather from "./assets/mygiftlist.ico";
+import larhco from "./assets/larhco.png";
 import heyo from "./assets/heyo.jpg";
 import anigme from "./assets/anigme.png";
 import ala from "./assets/ala.ico"
@@ -13,15 +14,9 @@ const Works = () => {
             </div>
             <div className="works">
                 <div className="row">
-                    <div className="project">
-                        <h4>MYGIFTLIST</h4>
-                        <img src={ cityweather } alt="" />
-                        <p>Um aplicativo fullstack que permite aos usuários disponibilizar listas de presentes que querem em seus eventos. Feito em TypeScript, possui um frontend em React e uma API para requisições no banco de dados.</p>
-                        <div className="link-buttons">
-                            {/* <a target='_blank'  rel="noreferrer" href="https://mygiftlist-live.netlify.app">Projeto</a> */}
-                            <a target='_blank'  rel="noreferrer" href='https://github.com/hugofolloni/my-gift-list'>Github</a>
-                        </div>
-                    </div>
+
+
+
                     <div className="project">
                         <h4>ANIGME</h4>
                         <img src={ anigme } alt="" />
@@ -31,17 +26,18 @@ const Works = () => {
                             <a target='_blank'  rel="noreferrer" href='https://github.com/hugofolloni/anigme'>Github</a>
                         </div>
                     </div>
+
+
+
                     <div className="project">
-                        <h4>WIKI-ANALYSIS</h4>
-                        <img src={ ala } alt="" />
-                        <p>Projeto fullstack para disciplina de Álgebra Linear, é uma aplicação capaz de determinar a categoria de um artigo da Wikipédia com base nas palavras do texto. Possui um sistema de aprendizado com base nas pesquisas anteriores.</p>
-                        <div className="link-buttons">
-                            <a target='_blank'  rel="noreferrer" href="https://wiki-analysis.netlify.app">Projeto</a>
-                            <a target='_blank'  rel="noreferrer" href='https://github.com/hugofolloni/wiki-analysis'>Github</a>
-                        </div>
+                        <h4>MYGIFTLIST</h4>
+                        <img src={ cityweather } alt="" />
+                        <p>Um aplicativo fullstack que permite aos usuários disponibilizar listas de presentes que querem em seus eventos. Feito em TypeScript, possui um frontend em React e uma API para requisições no banco de dados.</p>
+                        <a target='_blank'  rel="noreferrer" href='https://github.com/hugofolloni/my-gift-list'>Github</a>                        
                     </div>
-                </div>
-                <div className="row">
+
+
+
                     <div className="project">
                         <h4>EVENT CONFIRMATION</h4>
                         <img src={ ecs } style={ { borderRadius:"20%" } } alt="" />
@@ -51,12 +47,32 @@ const Works = () => {
                             <a target='_blank'  rel="noreferrer" href='https://github.com/hugofolloni/event-confirmation-system'>Github</a>
                         </div>
                     </div>
+
+
+
+                </div>
+                <div className="row">
+
+
+
+                <div className="project">
+                        <h4>LARHCO</h4>
+                        <img src={ larhco } alt="" />
+                        <p>Trabalho freelancer realizado para laboratório de química LARHCO, da Universidade Federal do Rio de Janeiro. Contém informações sobre os membros e projetos da organização e é editável por administradores com permissão.</p>
+                        <a target='_blank'  rel="noreferrer" href="https://larhco.netlify.app">Projeto</a>
+                    </div>
+
+
+
                     <div className="project">
                         <h4>FLORESTA SEMPRE VIVA</h4>
                         <img src={ corujinha } alt="" height='45px' width='45px' />
                         <p>Trabalho freelancer realizado para a empresa Bracell, é uma single-page-application para um projeto da corporação. Conta com layout detalhado, junto de algumas funcionalidades, como vídeos embed e galeria de fotos.</p>
                         <a target='_blank'  rel="noreferrer" href="https://florestasempreviva.com.br">Projeto</a>
                     </div>
+
+
+
                     <div className="project">
                         <h4>HEYO DISCORD BOT</h4>
                         <img src={ heyo } style={ { borderRadius:"20%" } } alt="" />
@@ -66,6 +82,9 @@ const Works = () => {
                             <a target='_blank'  rel="noreferrer" href='https://github.com/hugofolloni/heyo-discord-bot'>Github</a>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
         </div>
