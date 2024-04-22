@@ -22,7 +22,7 @@ const About = () => {
                         <span>PostgreSQL</span>
                         <span>SQL Server</span>
                     </div>
-                    <span className="bio">Furthermore, I speak Portuguese fluently as my native language, and I am also fluent in English. I'm currently trying to learn Italian as well.</span>
+                    <span className="bio" style={{marginTop: '10px'}}>Furthermore, I speak Portuguese fluently as my native language, and I am also fluent in English. I'm currently trying to learn Italian as well.</span>
                     <span className="bio">Also, I spend most of my free time playing guitar and playing some competitive games such as Valorant and League of Legends.</span>
                 </div>
             </Fade>
