@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./Home";
+import About from "./About";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header-wrapper">
+        <div className="header">
+          <div className="nav">
+            <a href="#home">hugofolloni</a>
+          </div>
+          <div className="links">
+            <a href="https://github.com/hugofolloni/" target="_blank" rel='noreferrer'>
+              <GitHubIcon className='icon'/>          
+            </a>
+            <a href="https://www.linkedin.com/in/hugofolloni/" target="_blank" rel='noreferrer'>
+              <LinkedInIcon className='icon'/>          
+            </a>
+          </div>
+        </div>
+      </div>
+        <Home id='home' />
+        <About id='about' />
     </div>
   );
 }
