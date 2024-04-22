@@ -18,7 +18,7 @@ const Home = () => {
                             />
                         </span>
                         <span className='subtitle'>I like to build things.</span>
-                        <span>Software Engineer and Computer Science student. Passionate about technology since a child, made my hobby my job. I describe myself as a knowdelge seeker.</span>
+                        <span>Software Engineer and Computer Science student. Passionate about technology since my childhood, made my hobby my job. I describe myself as a knowledge seeker.</span>
                     </div>
                 </Fade>
             </div>     

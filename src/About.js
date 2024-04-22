@@ -10,7 +10,7 @@ const About = () => {
                 <div className="about">
                     <span className="title">~ about-me</span>
                     <span className="bio">I'm a brazilian <strong className='green'>software engineer</strong> based in Rio de Janeiro. Self-taught and curious, I always want to learn new things. I love to <strong className='green'>solve problems</strong> and think rationally about them, and that's why I love to code.</span>
-                    <span className="bio">Currently an Intern at <strong className='green'>BigDataCorp</strong>, my main goal is to develop myself every day. Also works under <strong className='green'>COPPETEC</strong> and <strong className='green'>UFRJ</strong> scientific projects, learning a lot about the most diverse areas of computation.</span>
+                    <span className="bio">Currently an Intern at <strong className='green'>BigDataCorp</strong>, my main goal is to develop myself every day. Also work under <strong className='green'>COPPETEC</strong> and <strong className='green'>UFRJ</strong> scientific projects, learning a lot about the most diverse areas of computation.</span>
                     <span className="bio">I have abillities on the following tools:</span>
                     <div className="techs">
                         <span>JavaScript</span>
@@ -22,6 +22,7 @@ const About = () => {
                         <span>PostgreSQL</span>
                         <span>SQL Server</span>
                     </div>
+                    <span className="bio">Furthermore, I speak Portuguese fluently as my native language, and I am also fluent in English. I'm currently trying to learn Italian as well.</span>
                     <span className="bio">Also, I spend most of my free time playing guitar and playing some competitive games such as Valorant and League of Legends.</span>
                 </div>
             </Fade>
