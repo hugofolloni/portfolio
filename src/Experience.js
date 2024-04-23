@@ -6,7 +6,7 @@ const Experience = () => {
     const defaultTexts = [ 
         {
             title: "Machine Teaching",
-            role: "Scientific Initiation Student",
+            role: "Undergraduate Researcher",
             date: 'MAY 2022 - NOW',
             task: [
                 "I am responsible for automating tests and optimizing dashboards to ensure the platform's reliability and enhance user experience. This involves creating automated test cases, implementing testing frameworks, and refining dashboard layouts for efficient data visualization.",
@@ -18,7 +18,7 @@ const Experience = () => {
             role: "ETL Intern",
             date: 'FEB 2023 - NOW',
             task: [
-                "As an intern on the ETL team within Team Verde, I tackle challenges centered on creating and maintaining Talend jobs. This role also involves providing support in resolving database-related issues. Through this experience, I've enhanced my skills in SQL and Java.",
+                "As an intern on the ETL area within Verde, I tackle challenges centered on creating and maintaining Talend jobs. This role also involves providing support in resolving database-related issues. Through this experience, I've enhanced my skills in SQL and Java.",
                 "I work under the Scrum methodology, ensuring efficient and collaborative project management. This environment has allowed me to gain practical insights into agile development practices and teamwork dynamics."
             ]
         }
@@ -36,13 +36,16 @@ const Experience = () => {
                     <div className="jobs-area">
                         <div className="jobs-selector">
                             { defaultTexts.map((item, index) => 
-                                (((current === index) && <div style={{borderRight: '1.5px solid #64ffda'}} onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items">
-                                    <span>{item.title}</span>
-                                </div>) || 
+                                ((((current === index) && 
+                                        (
+                                                <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items-selected"><span>{item.title}</span></div>
+                                        )
+                                    ) 
+                                    || 
                                      <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items">
                                     <span>{item.title}</span>
                                 </div>
-                                )
+                                ))
                             )}
                         </div>
                         <div className="jobs-infos">

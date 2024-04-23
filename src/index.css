@@ -12,6 +12,7 @@
 
 body, html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -97,15 +98,16 @@ span {
   justify-content: flex-start;
 }
 
-.nav a {
+.nav span {
   font-size: 12px;
-}
-
-.nav a:first-child{
+  text-decoration: none;
+  color: #eaeaea;
+  font-weight: 700;
   font-size: 26px;
   letter-spacing: -1px;
   margin-top: -3px;
   color: #64ffda;
+  cursor: pointer;
 }
 
 a {
@@ -277,7 +279,6 @@ a {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  /* background-color: red; */
 }
 
 .jobs-selector {
@@ -287,14 +288,18 @@ a {
   flex-direction: column;
 }
 
-.job-items {
+.job-items, .job-items-selected {
   padding: 10px;
   height: 60px;
-  border-bottom:  2px solid #090015;
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: flex-start;
   cursor: pointer;
+}
+
+.job-items-selected {
+  border-right: 1px solid #64ffda;
 }
 
 .job-items span{
@@ -309,7 +314,6 @@ a {
   padding: 20px 40px;
   width: 75%;
   height: 100%;
-  border-left: 3px solid #090015;
   border-radius: 0px 12px 12px 0px;
   display: flex;
   flex-direction: column;
@@ -364,12 +368,11 @@ a {
     width: 70px;
   }
   
-
   .home-wrapper{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     align-items: center;
     justify-content: center;
   }
@@ -403,13 +406,15 @@ a {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    /* height: 700px; */
+    height: fit-content;
+    margin-bottom: 50px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
+    padding: 50px 0 0 0;
   }
 
-  .about {
+  .about, .xp {
     padding: 0;
     width: 85vw;
   }
@@ -432,5 +437,42 @@ a {
   .photos {
     display: none;
   }
+
+  .jobs-area {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .jobs-selector {
+    flex-direction: row;
+    overflow: auto;
+    width: 85vw;
+    /* overflow-x: scroll; */
+  }
+
+  .jobs-selector::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  .jobs-infos {
+    width: 85vw;
+    padding: 20px 20px 0 0;
+    height: 500px;
+  }
+
+  .job-items, .job-items-selected {
+    height: 75px;
+    border-right: none;
+    background-color: #0e0020;
+    /* background-color: red; */
+    margin: 0px 1px;
+    font-weight: 700;
+    min-width: 40wv;
+  }
+  
+  .job-items-selected {
+    border-bottom: 1px solid #64ffda;
+  }
+
 
 }
