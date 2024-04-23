@@ -1,8 +1,21 @@
 import { Fade } from "react-awesome-reveal";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 import profile from "./assets/profile2.jpeg"
+import { useEffect, useState } from "react";
 
 const About = () => {
+
+   const [randomZ, setRandomZ] = useState(0);
+    useEffect(() =>{
+        const define = Math.ceil(Math.random() * 100)
+        if(define % 2){
+            setRandomZ(-1);
+        }
+        else{
+            setRandomZ(1)
+        }
+    },[])
+
     return ( 
         <div className="session-wrapper">
             <ParallaxProvider>
@@ -27,8 +40,8 @@ const About = () => {
                 </div>
             </Fade>
             <Parallax className="photos" speed={-17}>
-                <div className="ball" style={{bottom: 0, left: 0, marginBottom: '-50px', marginLeft: '-50px', zIndex: '-1'}}/>
-                <div className="ball" style={{top: 0, right: 0, marginTop: '-50px', marginRight: '-50px'}}/>
+                <div className="ball" style={{bottom: 0, left: 0, marginBottom: '-50px', marginLeft: '-50px', zIndex: randomZ}}/>
+                <div className="ball" style={{top: 0, right: 0, marginTop: '-50px', marginRight: '-50px', zIndex: randomZ * -1}}/>
                 <div className="photo-wrapper">
                     <img src={profile} alt="" />
                 </div>

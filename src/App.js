@@ -16,11 +16,11 @@ function App() {
             <a href="#home">hugofolloni</a>
           </div>
           <div className="links">
-            <a href="https://github.com/hugofolloni/" target="_blank" rel='noreferrer'>
-              <GitHubIcon className='icon'/>          
-            </a>
             <a href="https://www.linkedin.com/in/hugofolloni/" target="_blank" rel='noreferrer'>
               <LinkedInIcon className='icon'/>          
+            </a>
+            <a href="https://github.com/hugofolloni/" target="_blank" rel='noreferrer'>
+              <GitHubIcon className='icon'/>          
             </a>
           </div>
         </div>
@@ -28,7 +28,7 @@ function App() {
         <Home id="home" />
         <About />
         <Experience />
-
+        <Footer />
     </div>
   );
 }

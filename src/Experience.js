@@ -6,15 +6,27 @@ const Experience = () => {
     const defaultTexts = [ 
         {
             title: "Machine Teaching",
-            role: "Scientific Initiation Student"
+            role: "Scientific Initiation Student",
+            date: 'MAY 2022 - NOW',
+            task: [
+                "I am responsible for automating tests and optimizing dashboards to ensure the platform's reliability and enhance user experience. This involves creating automated test cases, implementing testing frameworks, and refining dashboard layouts for efficient data visualization.",
+                "Additionally, I develop and add new functionalities to the platform while troubleshooting and fixing bugs to maintain its stability and functionality. This hands-on experience allows me to contribute effectively to the platform's continuous improvement and user satisfaction."
+            ]
         },
         {
             title: "COPPETEC",
-            role: "ETL Intern"
+            role: "ETL Intern",
+            date: 'FEB 2023 - NOW',
+            task: [
+                "As an intern on the ETL team within Team Verde, I tackle challenges centered on creating and maintaining Talend jobs. This role also involves providing support in resolving database-related issues. Through this experience, I've enhanced my skills in SQL and Java.",
+                "I work under the Scrum methodology, ensuring efficient and collaborative project management. This environment has allowed me to gain practical insights into agile development practices and teamwork dynamics."
+            ]
         }
     ]
+    .reverse()
 
     const [texts, setTexts] = useState(defaultTexts[0])
+    const [current, setCurrent] = useState(0)
 
     return ( 
         <div className="session-wrapper">
@@ -23,14 +35,24 @@ const Experience = () => {
                     <span className="title">~ experience</span>
                     <div className="jobs-area">
                         <div className="jobs-selector">
-                            { defaultTexts.map((item, index) => (
-                                <div className="job-items">
-                                    <span onClick={() => setTexts(defaultTexts[index])}>{item.title}</span>
+                            { defaultTexts.map((item, index) => 
+                                (((current === index) && <div style={{borderRight: '1.5px solid #64ffda'}} onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items">
+                                    <span>{item.title}</span>
+                                </div>) || 
+                                     <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items">
+                                    <span>{item.title}</span>
                                 </div>
-                            ))}
+                                )
+                            )}
                         </div>
                         <div className="jobs-infos">
-                            <span><strong>{texts.role}</strong> <strong className="green">@ {texts.title}</strong></span>
+                            <span className='job-title'><strong>{texts.role}</strong> <strong className="green">@ {texts.title}</strong></span>
+                            <span className="job-duration">{texts.date}</span>
+                            <div className="jobs-all-tasks">
+                                {texts.task.map((value) => (
+                                    <span className="jobs-task">{value}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
