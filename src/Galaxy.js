@@ -7,7 +7,7 @@ const Galaxy = (props) => {
 
     const [ATTRACT_SPEED, ] = useState(props.attract || 0.5);
     const [REPULSE_SPEED, ] = useState(props.repulse || 0.2);
-    const [STAR_NUMBER, ] = useState(props.quantity || 400);
+    const [STAR_NUMBER, ] = useState(props.quantity || 300);
 
     const mousePosition = useMousePosition()
     var w = window.innerWidth;
@@ -16,7 +16,7 @@ const Galaxy = (props) => {
     const [time, setTime] = useState(Date.now());
 
     useEffect(() => {
-      setInterval(() => setTime(Date.now()), 10);
+      setInterval(() => setTime(Date.now()), 50);
     }, []);
 
     window.addEventListener('load', () => {
