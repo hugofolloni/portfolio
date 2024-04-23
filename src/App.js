@@ -2,6 +2,10 @@ import Home from "./Home";
 import About from "./About";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Experience from "./Experience";
+import Studies from "./Studies";
+import Projects from "./Projects"
+import Footer from "./Footer"
 
 function App() {
   return (
@@ -21,8 +25,10 @@ function App() {
           </div>
         </div>
       </div>
-        <Home id='home' />
-        <About id='about' />
+        <Home id="home" />
+        <About />
+        <Experience />
+
     </div>
   );
 }

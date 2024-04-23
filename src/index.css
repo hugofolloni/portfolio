@@ -65,6 +65,10 @@ span {
   background-color:#d3d3d5;
 }
 
+.xp .title::after {
+  margin-left: 230px;
+}
+
 .header-wrapper {
   width: 100vw;
   height: 55px;
@@ -168,7 +172,7 @@ a {
   text-align: center;
 }
 
-.about-wrapper {
+.session-wrapper {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -178,7 +182,7 @@ a {
   position: relative;
 }
 
-.about {
+.about, .xp {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -195,13 +199,13 @@ a {
 
 
 .photos {
-  width: 200px;
+  width: 300px;
   height: 300px;
   position: absolute;
   right: 0;
   top: 0;
   margin-top: 150px;
-  margin-right: calc(50% - 450px);
+  margin-right: calc(50% - 550px);
   z-index: 0;
 }
 
@@ -219,7 +223,7 @@ a {
 }
 
 .photo-wrapper {
-  width: 200px;
+  width: 300px;
   height: 300px;
   display: flex;
   align-items: center;
@@ -290,7 +294,7 @@ a {
     text-align: center;
   }
 
-  .about-wrapper {
+  .session-wrapper {
     display: flex;
     flex-direction: column;
     width: 100vw;

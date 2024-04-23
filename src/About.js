@@ -1,10 +1,10 @@
 import { Fade } from "react-awesome-reveal";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax"
-import profile from "./assets/profile.jpeg"
+import profile from "./assets/profile2.jpeg"
 
 const About = () => {
     return ( 
-        <div className="about-wrapper">
+        <div className="session-wrapper">
             <ParallaxProvider>
             <Fade direction='up' distance={"30px"}>
                 <div className="about">
