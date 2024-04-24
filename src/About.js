@@ -23,7 +23,7 @@ const About = () => {
                 <div className="about">
                     <span className="title">~ about-me</span>
                     <span className="bio">I'm a brazilian <strong className='green'>software engineer</strong> based in Rio de Janeiro. Self-taught and curious, I always want to learn new things. I love to <strong className='green'>solve problems</strong> and think rationally about them, and that's why I love to code.</span>
-                    <span className="bio">Currently an Intern at <strong className='green'>BigDataCorp</strong>, my main goal is to develop myself every day. Also work under <strong className='green'>COPPETEC</strong> and <strong className='green'>UFRJ</strong> scientific projects, learning a lot about the most diverse areas of computation.</span>
+                    <span className="bio">Currently{/*  an*/} I{/*ntern at <strong className='green'>BigDataCorp</strong>, my main goal is to develop myself every day. Also*/} work under <strong className='green'>COPPETEC</strong> and <strong className='green'>UFRJ</strong> scientific projects, learning a lot about the most diverse areas of computation.</span>
                     <span className="bio">I have abillities on the following tools:</span>
                     <div className="techs">
                         <span>JavaScript</span>
