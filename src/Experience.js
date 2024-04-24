@@ -29,31 +29,31 @@ const Experience = () => {
     const [current, setCurrent] = useState(0)
 
     return ( 
-        <div className="session-wrapper">
+        <div className="table-wrapper">
             <Fade direction='left' distance={"30px"}>
                 <div className="xp">
                     <span className="title">~ experience</span>
                     <div className="jobs-area">
-                        <div className="jobs-selector">
+                        <div className="selector">
                             { defaultTexts.map((item, index) => 
                                 ((((current === index) && 
                                         (
-                                                <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items-selected"><span>{item.title}</span></div>
+                                                <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="items-selected"><span>{item.title}</span></div>
                                         )
                                     ) 
                                     || 
-                                     <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="job-items">
+                                     <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="items">
                                     <span>{item.title}</span>
                                 </div>
                                 ))
                             )}
                         </div>
-                        <div className="jobs-infos">
-                            <span className='job-title'><strong>{texts.role}</strong> <strong className="green">@ {texts.title}</strong></span>
-                            <span className="job-duration">{texts.date}</span>
-                            <div className="jobs-all-tasks">
+                        <div className="table-infos">
+                            <span className='table-title'><strong>{texts.role}</strong> <strong className="green">@ {texts.title}</strong></span>
+                            <span className="table-duration">{texts.date}</span>
+                            <div className="table-all-tasks">
                                 {texts.task.map((value) => (
-                                    <span className="jobs-task">{value}</span>
+                                    <span className="table-task">{value}</span>
                                 ))}
                             </div>
                         </div>

@@ -10,7 +10,8 @@ const Home = () => {
                         <span className="main-title">
                             <Typewriter
                                 onInit={(typewriter) => {
-                                typewriter.typeString('hey,')
+                                typewriter
+                                .typeString('hey,')
                                 .pauseFor(500)
                                 .typeString(" i'm <strong style='color: #64ffda'>hugo</strong>!")
                                 .start();
