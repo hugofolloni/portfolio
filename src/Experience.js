@@ -7,7 +7,7 @@ const Experience = () => {
         {
             title: "Machine Teaching",
             role: "Undergraduate Researcher",
-            date: 'MAY 2022 - NOW',
+            date: 'FEB 2022 - NOW',
             task: [
                 "I am responsible for automating tests and optimizing dashboards to ensure the platform's reliability and enhance user experience. This involves creating automated test cases, implementing testing frameworks, and refining dashboard layouts for efficient data visualization.",
                 "Additionally, I develop and add new functionalities to the platform while troubleshooting and fixing bugs to maintain its stability and functionality. This hands-on experience allows me to contribute effectively to the platform's continuous improvement and user satisfaction."
@@ -16,7 +16,7 @@ const Experience = () => {
         {
             title: "COPPETEC",
             role: "ETL Intern",
-            date: 'FEB 2023 - NOW',
+            date: 'JUN 2023 - NOW',
             task: [
                 "As an intern on the ETL area within Verde, I tackle challenges centered on creating and maintaining Talend jobs. This role also involves providing support in resolving database-related issues. Through this experience, I've enhanced my skills in SQL and Java.",
                 "I work under the Scrum methodology, ensuring efficient and collaborative project management. This environment has allowed me to gain practical insights into agile development practices and teamwork dynamics."
