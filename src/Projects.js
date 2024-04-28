@@ -9,6 +9,8 @@ import stars from './assets/stars.png'
 import wiki from './assets/wiki.png'
 import chess from './assets/chess.png'
 
+
+
 const Projects = () => {
 
     const projectsInfos = [
@@ -73,6 +75,34 @@ const Projects = () => {
         }
     ]
 
+    const minorProjects = [
+        {
+            title: 'heyo-discord-bot',
+            description: 'an interactive bot for Discord that allows users to listen to music, play some games and get infos about weather and space missions.',
+            github: 'https://github.com/hugofolloni/heyo-discord-bot',
+            link: '',
+            tools: [
+                'JavaScript',
+                'NodeJS',
+                'DiscordJS'
+            ]
+        },
+        {
+            title: 'game-center',
+            description: 'a website that reunites some games that I made, like anigme, word.zzz and valorantdle. It allow uses to play them all.',
+            github: 'https://github.com/hugofolloni',
+            link: '',
+            tools: [
+                'JavaScript',
+                'React',
+                'NodeJS',
+                'Rollup'
+            ]
+        }
+    ]
+
+    const [minorProjectIndex, setMinorProjectIndex] = useState()
+
     return ( 
         <div className="projects-wrapper">
              {/* <Fade direction='up' distance={"30px"}> */}
@@ -92,6 +122,46 @@ const Projects = () => {
                             ))
                         }
                     </div>
+                    <div className="minor-projects-area">
+                        {minorProjects.map((item, index) => (
+                            <div className="minor-project">
+                                <div className="minor-project-title"  onClick={() => {
+                                        if(index !== minorProjectIndex){
+                                            setMinorProjectIndex(index);
+                                        }
+                                        else {
+                                            setMinorProjectIndex()
+                                        }
+                                    }}>
+                                    <span className='orange'>{item.title}</span>
+                                    { (index === minorProjectIndex && <span className="orange">-</span>) || <div className="orange">+</div>}
+                                </div>
+                                { index === minorProjectIndex && (
+                                <Fade direction="down" duration={500}>
+                                    <div className="minor-project-expand">
+                                        <span className='minor-project-description'>{item.description}</span>
+                                        <div className="minor-projects-footer">
+                                            <div className="minor-projects-tools">
+                                                {item.tools.map((item) => (
+                                                    <div className='tool'>{item}</div>
+                                                ))}
+                                            </div>
+                                            <div className="minor-projects-links">
+                                                {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
+                                                    <LaunchIcon className='icon'/>          
+                                                </a>}
+                                                <a href={item.github} target='_blank' rel='noreferrer'>
+                                                    <GitHubIcon className='icon'/>          
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Fade>
+                                )}
+                            </div>
+                        ))
+                    }
+                    </div>
                 </div>
             {/* </Fade> */}
         </div> 
@@ -103,7 +173,7 @@ const LeftProject = (props) => {
     const ref = useRef(null)
 
     const Tool = styled.div`  
-        background-color:#110033;
+        background-color:#0D0024;
         color: white;
         margin: 5px;
         border-radius: 6px;
@@ -176,7 +246,7 @@ const RightProject = (props) => {
     const ref = useRef(null)
 
     const Tool = styled.div`  
-        background-color:#110033;
+        background-color:#0D0024;
         color: white;
         margin: 5px;
         border-radius: 6px;
