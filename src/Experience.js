@@ -49,7 +49,7 @@ const Experience = () => {
                             )}
                         </div>
                         <div className="table-infos">
-                            <span className='table-title'><strong>{texts.role}</strong> <strong className="green">@ {texts.title}</strong></span>
+                            <span className='table-title'><strong>{texts.role}</strong> <strong className="orange">@ {texts.title}</strong></span>
                             <span className="table-duration">{texts.date}</span>
                             <div className="table-all-tasks">
                                 {texts.task.map((value) => (

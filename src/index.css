@@ -31,20 +31,20 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #64ffda;
+  background: #ff5f00;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #64ffda;
+  background: #ff5f00;
 }
 
 span {
   color: #d3d3d5;
 }
 
-.green {
-  color: #64ffda;
+.orange {
+  color: #ff5f00;
 }
 
 .title {
@@ -71,9 +71,14 @@ span {
   width: 380px;
 }
 
-.studies .title::after {
+.studies .title::after{
   margin-left: 170px;
   width: 440px;
+}
+
+.projects .title::after{
+  margin-left: 180px;
+  width: 430px;
 }
 
 .header-wrapper {
@@ -112,7 +117,7 @@ span {
   font-size: 26px;
   letter-spacing: -1px;
   margin-top: -3px;
-  color: #64ffda;
+  color: #ff5f00;
   cursor: pointer;
 }
 
@@ -180,7 +185,7 @@ a {
   text-align: center;
 }
 
-.session-wrapper, .footer-wrapper, .table-wrapper{
+.session-wrapper, .footer-wrapper, .projects-wrapper, .table-wrapper{
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -189,6 +194,7 @@ a {
   justify-content: flex-start;
   position: relative;
 }
+
 
 .session-wrapper {
   margin-bottom: 120px;
@@ -211,7 +217,7 @@ a {
   color: #a8a8a8;
 }
 
-.about, .xp, .studies {
+.about, .xp, .studies, .projects {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -230,7 +236,6 @@ a {
   margin-bottom: 10px;
 }
 
-
 .photos {
   width: 300px;
   height: 300px;
@@ -246,13 +251,9 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #64ffda;
+  background-color: #ff5f00;
   position: absolute;
   z-index: 1;
-}
-
-.photos-mobile {
-  display: none;
 }
 
 .photo-wrapper {
@@ -284,7 +285,7 @@ a {
 
 .techs span::before {
   content: "→    ";
-  color: #64ffda;
+  color: #ff5f00;
   position: absolute;
   margin-left: -25px;
   margin-top: -2px;
@@ -321,7 +322,7 @@ a {
 }
 
 .items-selected {
-  border-right: 1px solid #64ffda;
+  border-right: 1px solid #ff5f00;
 }
 
 .studies .items, .studies .items-selected {
@@ -329,7 +330,7 @@ a {
 }
 
 .studies .items-selected {
-  border-left: 1px solid #64ffda;
+  border-left: 1px solid #ff5f00;
   border-right: none;
 }
 
@@ -338,7 +339,7 @@ a {
 }
 
 .items:hover span, .items-selected:hover span{
-  color: #64ffda;
+  color: #ff5f00;
 }
 
 .table-infos {
@@ -376,14 +377,120 @@ a {
 
 .table-task::before {
   content: "→      ";
-  color: #64ffda;
+  color: #ff5f00;
   position: absolute;
   margin-left: -25px;
   margin-top: -2px;
 }
 
-/* 110033 111144 112255 113366 114477 */
+.projects-wrapper {
+  height: fit-content;
+}
 
+.projects {
+  height: fit-content;
+}
+
+.projects-area {
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+
+.project-container{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 50px 0;
+}
+
+.project-container:nth-child(2n){
+  flex-direction: row-reverse;
+}
+
+.left-project {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.project-image-wrapper{
+  width: 800px;
+  height: 380px;
+  /* background-color: blue; */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.grainy {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+}
+
+.left-project-description {
+  position: absolute;
+  background-color:#110033;
+  width: 600px;
+  height: 160px;
+  top: 0;
+  border-radius: 0px 12px 0 12px ;
+  padding: 15px 20px;
+  margin-top: 300px;
+  left: 0;
+  margin-left: 300px;
+}
+
+.left-project img {
+  width: 800px;
+}
+
+.project-container .orange {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 21px;
+}
+
+.left-project-links {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  padding: 20px 15px  15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  margin-top: 260px;
+  left: 0;
+  margin-left: 800px;
+}
+
+.left-project-tools {
+  width: 300px;
+  height: 80px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 0;
+  margin-top: 380px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+
+/* 110033 111144 112255 113366 114477 */
 
 @media screen and (max-width: 1200px){
   .header {
@@ -497,7 +604,7 @@ a {
   }
   
   .items-selected {
-    border-bottom: 1px solid #64ffda;
+    border-bottom: 1px solid #ff5f00;
   }
 
 
