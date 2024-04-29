@@ -95,7 +95,7 @@ span {
   flex-direction: row;
   position: fixed;
   background-color: #090015;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header {
