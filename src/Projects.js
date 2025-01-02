@@ -286,7 +286,7 @@ const RightProject = (props) => {
     const item = props.item;
     console.log(item)
     return (
-        <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"}> 
+        // <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"}> 
             <div className="right-project">
                 <div className="project-image-wrapper"><img src={item.photo} alt="" /><div className="grainy"/></div>
                 <div className="right-project-description">
@@ -312,7 +312,7 @@ const RightProject = (props) => {
                     </SlideTrack>
                 </div>
             </div>
-    </Fade> 
+    // </Fade> 
     )
 }
  
