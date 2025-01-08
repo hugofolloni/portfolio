@@ -41,7 +41,7 @@ const Experience = () => {
         <div className="table-wrapper">
             <Fade direction='left' distance={"30px"}>
                 <div className="xp">
-                    <span className="title">~ experience</span>
+                    <h2 className="title">~ experience</h2>
                     <div className="jobs-area">
                         <div className="selector">
                             { defaultTexts.map((item, index) => 

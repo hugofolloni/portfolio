@@ -23,7 +23,7 @@ const Studies = () => {
         <div className="table-wrapper">
             <Fade direction='right' distance={"30px"}>
                 <div className="studies">
-                    <span className="title">~ studies</span>
+                    <h2 className="title">~ studies</h2>
                     <div className="studies-area">
                         <div className="selector">
                             { defaultTexts.map((item, index) => 

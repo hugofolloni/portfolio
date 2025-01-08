@@ -1,12 +1,9 @@
-import { Fade } from 'react-awesome-reveal';
-
 const Contact = () => {
   
     return ( 
         <div className="contact-wrapper">
-            <Fade direction="up">
                 <div className="contact">
-                <span className="title">~ contact</span>
+                <h2 className="title">~ contact</h2>
                     <div className='contact-texts'>
                         <span className="main-title" style={{fontWeight: '700'}}>contact me!</span>
                         <span className='subtitle' style={{fontSize: '27px'}}>Let's <span className="orange">create</span> something together.</span>
@@ -16,7 +13,6 @@ const Contact = () => {
                         <div className="contact-button-background"></div>
                     </div>
                 </div>
-            </Fade>
         </div>
      );
 }

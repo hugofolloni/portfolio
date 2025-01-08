@@ -16,27 +16,24 @@ const About = () => {
         }
     },[])
 
+    const techs = ["JavaScript", "React.js", "Python", "TypeScript", "C#", ".NET", "PostgreSQL", "MongoDB"]
+
     return ( 
         <div className="session-wrapper">
             <ParallaxProvider>
             <Fade direction='up' distance={"30px"}>
                 <div className="about">
-                    <span className="title">~ about-me</span>
+                    <h2 className="title">~ about-me</h2>
                     <span className="bio">I'm a brazilian <strong className='orange'>software engineer</strong> based in Rio de Janeiro. Self-taught and curious, I always want to learn new things. I love to <strong className='orange'>solve problems</strong> and think rationally about them, and that's why I love to code.</span>
-                    <span className="bio">I study Computer Science at Universidade Federal do Rio de Janeiro, one of the most prestigious universities in Brazil. Also, I currently{/*  an Intern at <strong className='orange'>BigDataCorp</strong>, my main goal is to develop myself every day. Also*/} work under <strong className='orange'>COPPETEC</strong> and <strong className='orange'>UFRJ</strong> scientific projects, learning a lot about the most diverse areas of technology and development.</span>
+                    <span className="bio">I study Computer Science at Universidade Federal do Rio de Janeiro, one of the most prestigious universities in Brazil. Besides, I am a software engineer intern at <strong className='orange'>BigDataCorp</strong>. Also, I currently{/*  an Intern at <strong className='orange'>BigDataCorp</strong>, my main goal is to develop myself every day. Also*/} work under <strong className='orange'>COPPETEC</strong> and <strong className='orange'>UFRJ</strong> scientific projects, learning a lot about the most diverse areas of technology and development.</span>
                     <span className="bio">I have abillities on the following tools:</span>
                     <div className="techs">
-                        <span>JavaScript</span>
-                        <span>React.js</span>
-                        <span>Python</span>
-                        <span>Django</span>
-                        <span>TypeScript</span>
-                        <span>C#</span>
-                        <span>PostgreSQL</span>
-                        <span>SQL Server</span>
+                        {techs.map(tech => (
+                            <span>{tech}</span>
+                        ))}
                     </div>
                     <span className="bio" style={{marginTop: '10px'}}>Furthermore, I speak Portuguese fluently as my native language, and I am also fluent in English. I'm currently trying to learn Italian as well.</span>
-                    <span className="bio">Also, I spend most of my free time playing guitar and playing some competitive games such as Valorant and League of Legends.</span>
+                    <span className="bio">Also, I spend most of my free time playing guitar and playing some games such as Valorant, Chess and League of Legends.</span>
                 </div>
             </Fade>
             <Parallax className="photos" speed={-17}>

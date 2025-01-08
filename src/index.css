@@ -52,6 +52,7 @@ span {
   font-weight: 400;
   position: relative;
   margin-bottom: 50px;
+  color: #d3d3d5;
 }
 
 .title::after{
@@ -222,7 +223,7 @@ a {
   color: #a8a8a8;
 }
 
-.about, .xp, .studies, .projects {
+.about, .xp, .studies, .projects, .freelancer-projects {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -395,10 +396,12 @@ a {
 
 .projects-wrapper {
   height: fit-content;
+  /* margin-bottom: 120px; */
 }
 
-.projects {
+.projects, .freelancer-projects {
   height: fit-content;
+  margin-bottom: 50px;
 }
 
 .projects-area {
@@ -610,7 +613,7 @@ a {
 
 .contact-wrapper {
   margin-top: 0px;
-  height: 500px;
+  height: fit-content;
   justify-content: center;
 }
 
@@ -806,8 +809,9 @@ a {
     width: 100%;
   }
  
-  .projects {
+  .projects, .freelancer-projects{
     width: 90vw;
+    height: fit-content;
   }
   
   .projects-area {
@@ -875,7 +879,6 @@ a {
   .minor-project{
     width: 100%;
   }
-
 
   .title::after{
     width: calc(85vw - 210px);

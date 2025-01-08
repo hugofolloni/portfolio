@@ -5,15 +5,29 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import styled, {keyframes} from "styled-components";
 
 import wedding from './assets/wedding.png'
-import stars from './assets/stars.png'
 import wiki from './assets/wiki.png'
-import chess from './assets/chess.png'
+import multiverse from './assets/multiverse.png'
+import profileapp from './assets/profileapp.png'
 
 
 
 const Projects = () => {
 
     const projectsInfos = [
+        {
+            title: 'yze-bio',
+            photo: profileapp,
+            description: 'a "create your card" system, where the user can create profiles to display infos about himself, linking social medias and showing his favorite song and GIF. The design is fully customizable, allow the creator to change colors, fonts and positions of items on screen.',
+            github: 'https://github.com/hugofolloni/yze-bio',
+            link: 'https://yze.bio',
+            tools: [
+                'JavaScript',
+                'React',
+                'C#',
+                '.NET',
+                'PostgreSQL',
+            ]
+        },
         {
             title: 'wedding-gifts',
             photo: wedding,
@@ -29,16 +43,19 @@ const Projects = () => {
             ]
         },
         {
-            title: 'react-stars-particles',
-            photo: stars,
-            description: 'a captivating React component that brings a dynamic and interactive galaxy background to your web pages. With stars that are attracted to the mouse pointer and smooth animations, it offers a unique and engaging user experience.',
-            github: 'https://github.com/hugofolloni/react-stars-particles',
-            link: 'https://galaxysimulator.netlify.app',
+            title: 'spotify-multiverse',
+            photo: multiverse,
+            description: "a full-stack application that helps users discover new songs based on a playlist they already love. Through mathematical analysis, the project extracts the essential elements of the user's favorite songs, enabling the search for other tracks that will also be appealing.",
+            github: 'https://github.com/hugofolloni/spotify-multiverse',
+            link: 'https://spotify-multiverse.netlify.app',
             tools: [
                 'JavaScript',
                 'React',
-                'NodeJS',
-                'Rollup'
+                'PostgreSQL',
+                'Python',
+                'Flask',
+                'NumPy',
+                'Sklearn'
             ]
         },
         {
@@ -57,10 +74,24 @@ const Projects = () => {
                 "NumPy",
                 "Express"
             ]
+        }
+    ]
+
+    const minorProjects = [
+        {
+            title: 'react-stars-particles',
+            description: 'a captivating React component that brings a dynamic and interactive galaxy background to your web pages. With stars that are attracted to the mouse pointer and smooth animations, it offers a unique and engaging user experience.',
+            github: 'https://github.com/hugofolloni/react-stars-particles',
+            link: 'https://galaxysimulator.netlify.app',
+            tools: [
+                'JavaScript',
+                'React',
+                'NodeJS',
+                'Rollup'
+            ]
         },
         {
             title: 'stockglass',
-            photo: chess,
             description: 'implementation of a chess game with Pygame, featuring classes for the game, pieces, and the board. It utilizes algorithms to make computer moves. The game logic manages moves, checks, and interactions, while the graphical interface displays the board and allows interactive gameplay.',
             github: 'https://github.com/hugofolloni/wiki-analysis',
             link: '',
@@ -68,14 +99,8 @@ const Projects = () => {
                 'Python',
                 'Pygame',
                 'Numpy',
-                'Python',
-                'Pygame',
-                'Numpy'
             ]
-        }
-    ]
-
-    const minorProjects = [
+        },
         {
             title: 'heyo-discord-bot',
             description: 'an interactive bot for Discord that allows users to listen to music, play some games and get infos about weather and space missions.',
@@ -101,13 +126,10 @@ const Projects = () => {
         }
     ]
 
-    const [minorProjectIndex, setMinorProjectIndex] = useState()
-
     return ( 
-        <div className="projects-wrapper">
-             {/* <Fade direction='up' distance={"30px"}> */}
+        <div className="projects-wrapper" style={{overflow: 'hidden'}}>
                 <div className="projects">
-                    <span className="title">~ projects</span>
+                    <h2 className="title">~ projects</h2>
                     <div className="projects-area">
                         {
                             projectsInfos.map((item, index) => (
@@ -122,48 +144,9 @@ const Projects = () => {
                             ))
                         }
                     </div>
-                    <div className="minor-projects-area">
-                        {minorProjects.map((item, index) => (
-                            <div className="minor-project">
-                                <div className="minor-project-title"  onClick={() => {
-                                        if(index !== minorProjectIndex){
-                                            setMinorProjectIndex(index);
-                                        }
-                                        else {
-                                            setMinorProjectIndex()
-                                        }
-                                    }}>
-                                    <span className='orange'>{item.title}</span>
-                                    { (index === minorProjectIndex && <span className="orange">-</span>) || <div className="orange">+</div>}
-                                </div>
-                                { index === minorProjectIndex && (
-                                <Fade direction="down" duration={500}>
-                                    <div className="minor-project-expand">
-                                        <span className='minor-project-description'>{item.description}</span>
-                                        <div className="minor-projects-footer">
-                                            <div className="minor-projects-tools">
-                                                {item.tools.map((item) => (
-                                                    <div className='tool'>{item}</div>
-                                                ))}
-                                            </div>
-                                            <div className="minor-projects-links">
-                                                {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
-                                                    <LaunchIcon className='icon'/>          
-                                                </a>}
-                                                <a href={item.github} target='_blank' rel='noreferrer'>
-                                                    <GitHubIcon className='icon'/>          
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Fade>
-                                )}
-                            </div>
-                        ))
-                    }
-                    </div>
+
+                    <MinorProjects projects={minorProjects} />
                 </div>
-            {/* </Fade> */}
         </div> 
     );
 }
@@ -210,7 +193,7 @@ const LeftProject = (props) => {
     }, [])
 
     const item = props.item;
-    console.log(item)
+
     return (
         <Fade style={{width: '100%', height:'100%'}} direction='right' distance={"30px"}> 
             <div className="left-project">
@@ -223,9 +206,9 @@ const LeftProject = (props) => {
                     {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
                         <LaunchIcon className='icon'/>          
                     </a>}
-                    <a href={item.github} target='_blank' rel='noreferrer'>
+                    {item.github !== "" && <a href={item.github} target='_blank' rel='noreferrer'>
                         <GitHubIcon className='icon'/>          
-                    </a>
+                    </a>}
                 </div>
                 <div className="left-project-tools">
                     <SlideTrack ref={ref}>
@@ -286,7 +269,7 @@ const RightProject = (props) => {
     const item = props.item;
     console.log(item)
     return (
-        // <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"}> 
+        <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"}> 
             <div className="right-project">
                 <div className="project-image-wrapper"><img src={item.photo} alt="" /><div className="grainy"/></div>
                 <div className="right-project-description">
@@ -297,9 +280,9 @@ const RightProject = (props) => {
                    {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
                         <LaunchIcon className='icon'/>          
                     </a>}
-                    <a href={item.github} target='_blank' rel='noreferrer'>
+                    {item.github !== "" && <a href={item.github} target='_blank' rel='noreferrer'>
                         <GitHubIcon className='icon'/>          
-                    </a>
+                    </a>}
                 </div>
                 <div className="right-project-tools">
                     <SlideTrack ref={ref}>
@@ -312,7 +295,54 @@ const RightProject = (props) => {
                     </SlideTrack>
                 </div>
             </div>
-    // </Fade> 
+    </Fade> 
+    )
+}
+
+const MinorProjects = (props) => {
+    const [minorProjectIndex, setMinorProjectIndex] = useState()
+
+    return (
+        <div className="minor-projects-area">
+            {props.projects.map((item, index) => (
+                <div className="minor-project">
+                    <div className="minor-project-title"  onClick={() => {
+                            if(index !== minorProjectIndex){
+                                setMinorProjectIndex(index);
+                            }
+                            else {
+                                setMinorProjectIndex()
+                            }
+                        }}>
+                        <span className='orange'>{item.title}</span>
+                        { (index === minorProjectIndex && <span className="orange">-</span>) || <div className="orange">+</div>}
+                    </div>
+                    { index === minorProjectIndex && (
+                    <Fade direction="down" duration={500}>
+                        <div className="minor-project-expand">
+                            <span className='minor-project-description'>{item.description}</span>
+                            <div className="minor-projects-footer">
+                                <div className="minor-projects-tools">
+                                    {item.tools.map((item) => (
+                                        <div className='tool'>{item}</div>
+                                    ))}
+                                </div>
+                                <div className="minor-projects-links">
+                                    {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
+                                        <LaunchIcon className='icon'/>          
+                                    </a>}
+                                    {item.github !== "" && <a href={item.github} target='_blank' rel='noreferrer'>
+                                        <GitHubIcon className='icon'/>          
+                                    </a>}
+                                </div>
+                            </div>
+                        </div>
+                    </Fade>
+                    )}
+                </div>
+            ))
+        }
+        </div>
     )
 }
  

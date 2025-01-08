@@ -4,6 +4,7 @@ import About from "./About";
 import Experience from "./Experience";
 import Studies from "./Studies";
 import Projects from "./Projects"
+import Freelancer from "./Freelancer";
 import Contact from "./Contact";
 import Footer from "./Footer"
 import { Galaxy } from 'react-stars-particles'
@@ -18,6 +19,7 @@ function App() {
         <Experience />
         <Studies />
         <Projects />
+        <Freelancer />
         <Contact />
         <Footer />
     </div>
