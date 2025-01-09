@@ -4,7 +4,7 @@ const Freelancer = () => {
 
     const projects = [
         {
-            title: "Bracell — Floresta Sempre Siva",
+            title: "Bracell — Floresta Sempre Viva",
             link: "https://florestasempreviva.com.br"
         },
         {
