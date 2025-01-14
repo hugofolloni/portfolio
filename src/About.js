@@ -21,7 +21,7 @@ const About = () => {
     return ( 
         <div className="session-wrapper">
             <ParallaxProvider>
-            <Fade direction='up' distance={"30px"}>
+            <Fade direction='down' fraction={0.3}>
                 <div className="about">
                     <h2 className="title">~ about-me</h2>
                     <span className="bio">I'm a brazilian <strong className='orange'>software engineer</strong> based in Rio de Janeiro. Self-taught and curious, I always want to learn new things. I love to <strong className='orange'>solve problems</strong> and think rationally about them, and that's why I love to code.</span>
