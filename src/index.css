@@ -336,6 +336,11 @@ a {
   border-right: 1px solid #ff5f00;
 }
 
+.items-selected span {
+  font-weight: 700;
+  color: #ff5f00;
+}
+
 .studies .items, .studies .items-selected {
   padding-left: 20px;
 }
@@ -346,7 +351,7 @@ a {
 }
 
 .items span, .jobs-items-selected span{
-  transition: 0.7s ease-in all;
+  transition: 0.2s ease-in all;
 }
 
 .items:hover span, .items-selected:hover span{

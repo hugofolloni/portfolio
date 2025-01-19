@@ -29,20 +29,6 @@ const Projects = () => {
             ]
         },
         {
-            title: 'wedding-gifts',
-            photo: wedding,
-            description: 'a comprehensive web application with an API designed to streamline wedding gift management. Couples can easily add gifts to the list and track who has chosen to purchase each item. Guests have access to an organized list of gifts, allowing them to choose, purchase, and pay via an automatically generated PIX code.',
-            github: 'https://github.com/hugofolloni/wedding-gifts',
-            link: 'https://wedding-manager.netlify.app',
-            tools: [
-                'JavaScript',
-                'React',
-                'PostgreSQL',
-                'NodeJS',
-                'Express'
-            ]
-        },
-        {
             title: 'spotify-multiverse',
             photo: multiverse,
             description: "a full-stack application that helps users discover new songs based on a playlist they already love. Through mathematical analysis, the project extracts the essential elements of the user's favorite songs, enabling the search for other tracks that will also be appealing.",
@@ -73,6 +59,20 @@ const Projects = () => {
                 'BeautifulSoup',
                 "NumPy",
                 "Express"
+            ]
+        },
+        {
+            title: 'wedding-gifts',
+            photo: wedding,
+            description: 'a comprehensive web application with an API designed to streamline wedding gift management. Couples can easily add gifts to the list and track who has chosen to purchase each item. Guests have access to an organized list of gifts, allowing them to choose, purchase, and pay via an automatically generated PIX code.',
+            github: 'https://github.com/hugofolloni/wedding-gifts',
+            link: 'https://wedding-manager.netlify.app',
+            tools: [
+                'JavaScript',
+                'React',
+                'PostgreSQL',
+                'NodeJS',
+                'Express'
             ]
         }
     ]
