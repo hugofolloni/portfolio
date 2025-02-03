@@ -79,6 +79,19 @@ const Projects = () => {
 
     const minorProjects = [
         {
+            title: 'tagnalyzer',
+            description: 'A webapp that provides Last.fm users with detailed insights into their listening habits by analyzing the tags associated with their favorite artists.',
+            github: 'https://github.com/hugofolloni/tagnalyzer',
+            link: 'https://tagnalyzer.vercel.app',
+            tools: [
+                'TypeScript',
+                'React',
+                'Next.js',
+                'Sass',
+                'Redux'
+            ]
+        },
+        {
             title: 'react-stars-particles',
             description: 'a captivating React component that brings a dynamic and interactive galaxy background to your web pages. With stars that are attracted to the mouse pointer and smooth animations, it offers a unique and engaging user experience.',
             github: 'https://github.com/hugofolloni/react-stars-particles',
