@@ -711,16 +711,20 @@ a {
   }
   
   .main-title {
-    font-size: 52px;
+    font-size: 12vw;
     font-weight: 400;
     margin-bottom: 10px;
   }
   
   .subtitle{
-    font-size: 32px;
+    font-size: 6vw;
     margin-bottom: 15px;
   }
-  
+
+  .main-description {
+    font-size: 3.5vw;
+  }
+
   .home .texts {
     display: flex;
     width: 500px;
@@ -853,7 +857,7 @@ a {
   }
   
   .project-container span, .minor-project span {
-    font-size: 14px;
+    font-size: 3.5vw;
   }
   
   .project-container .orange, .minor-project .orange {
@@ -911,6 +915,18 @@ a {
 
   .contact .title::after {
     width: calc(85vw - 160px);
+  }
+
+  .minor-projects-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  
+  .minor-projects-links {
+    width: 100%;
+    margin: 3%;
+    justify-content: flex-end;
   }
 
 }
