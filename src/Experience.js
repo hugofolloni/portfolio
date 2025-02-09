@@ -27,7 +27,7 @@ const Experience = () => {
             role: "Software Engineer Intern",
             date: "JUN 2024 - NOW",
             task: [
-                "In my role, I focus on solving challenges involving the foundational services of the company, like billing and access control. This role involves the development of web pages with React + Redux and implementing API routes in ASP.NET, enhancing my skills in front-end and back-end integration.",
+                "In my role, I focus on solving challenges involving the foundational services of the company, like billing and access control. This role involves the development of web pages with React + Redux and implementing API routes in .NET, enhancing my skills in front-end and back-end integration.",
                 "I contribute to the continuous improvement of the platform by refactoring legacy code, adopting modern technologies, and fostering collaboration to ensure a user-centric and reliable experience."
             ]
         }
