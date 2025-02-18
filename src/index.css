@@ -134,7 +134,7 @@ a {
 }
 
 .links{
-  width: 7%;
+  width: 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -693,7 +693,7 @@ a {
   }
 
   .links{
-    width: 70px;
+    width: 120px;
   }
   
   .home-wrapper{

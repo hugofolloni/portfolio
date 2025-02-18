@@ -1,5 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ResumeIcon from "@mui/icons-material/Description";
 
 const Header = () => {
     return ( 
@@ -14,6 +15,9 @@ const Header = () => {
             </a>
             <a href="https://github.com/hugofolloni/" target="_blank" rel='noreferrer'>
               <GitHubIcon className='icon'/>          
+            </a>
+            <a href="/resume.pdf" target="_blank" rel='noreferrer'>
+              <ResumeIcon className='icon'/>
             </a>
           </div>
         </div>
