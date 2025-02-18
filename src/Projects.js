@@ -80,7 +80,7 @@ const Projects = () => {
     const minorProjects = [
         {
             title: 'tagnalyzer',
-            description: 'A webapp that provides Last.fm users with detailed insights into their listening habits by analyzing the tags associated with their favorite artists.',
+            description: 'a webapp that provides Last.fm users with detailed insights into their listening habits by analyzing the tags associated with their favorite artists.',
             github: 'https://github.com/hugofolloni/tagnalyzer',
             link: 'https://tagnalyzer.vercel.app',
             tools: [
@@ -105,7 +105,7 @@ const Projects = () => {
         },
         {
             title: 'word.zzz',
-            description: 'A game where you try to guess the word based on your previous attempts, like wordle or term.ooo. It allows user to play non-stop, instead of daily playing like others.',
+            description: 'a game where you try to guess the word based on your previous attempts, like wordle or term.ooo. It allows user to play non-stop, instead of daily playing like others.',
             github: 'https://github.com/hugofolloni/word.zzz',
             link: 'https://wordzzz.netlify.app',
             tools: [
@@ -116,7 +116,7 @@ const Projects = () => {
         },
         {
             title: 'anigme',
-            description: 'A game to guess who is the anime character behind the blur photo. It uses a public API to select the character and changes it every day.',
+            description: 'a game to guess who is the anime character behind the blur photo. It uses a public API to select the character and changes it every day.',
             github: 'https://github.com/hugofolloni/anigme',
             link: 'https://anigme.netlify.app',
             tools: [
@@ -128,7 +128,7 @@ const Projects = () => {
         },
         {
             title: 'stockglass',
-            description: 'implementation of a chess game with Pygame, featuring classes for the game, pieces, and the board. It utilizes algorithms to make computer moves. The game logic manages moves, checks, and interactions, while the graphical interface displays the board and allows interactive gameplay.',
+            description: 'an implementation of a chess game with Pygame, featuring classes for the game, pieces, and the board. It utilizes algorithms to make computer moves. The game logic manages moves, checks, and interactions, while the graphical interface displays the board and allows interactive gameplay.',
             github: 'https://github.com/hugofolloni/wiki-analysis',
             link: '',
             tools: [
