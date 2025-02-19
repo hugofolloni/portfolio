@@ -13,7 +13,7 @@ const Header = () => {
             <a href="https://www.linkedin.com/in/hugofolloni/" target="_blank" rel='noreferrer'>
               <LinkedInIcon className='icon'/>          
             </a>
-            <a href="https://github.com/hugofolloni/" target="_blank" rel='noreferrer'>
+            <a href="https://github.com/folloni/" target="_blank" rel='noreferrer'>
               <GitHubIcon className='icon'/>          
             </a>
             <a href="/resume.pdf" target="_blank" rel='noreferrer'>

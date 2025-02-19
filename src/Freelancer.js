@@ -4,17 +4,17 @@ const Freelancer = () => {
 
     const projects = [
         {
-            title: "Bracell — Floresta Sempre Viva",
-            link: "https://florestasempreviva.com.br"
+            title: "Instituto de Proteção ao Jogador",
+            link: "https://ipjbr.com.br"
         },
         {
             title: "UFRJ — LARHCO",
             link: "https://larhco.iq.ufrj.br"
         },
         {
-            title: "Instituto de Proteção ao Jogador",
-            link: "https://ipjbr.com.br"
-        }
+            title: "Bracell — Floresta Sempre Viva",
+            link: "https://florestasempreviva.com.br"
+        },
     ]
 
     return ( 
