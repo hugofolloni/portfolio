@@ -25,11 +25,20 @@ const Experience = () => {
         {
             title: "BigDataCorp",
             role: "Software Engineer Intern",
-            date: "JUN 2024 - NOW",
+            date: "JUN 2024 - DEC 2025",
             task: [
                 "As an intern on the Billing & Monetization team, I develop and modernize full-stack solutions. I have built key features for internal administrative panels using .NET for APIs and responsive React components for the front-end.",
                 "I am actively contributing to a major platform modernization effort by refactoring legacy code and migrating essential UI components to a more maintainable and efficient React and Redux architecture, improving system reliability."
             ]
+        },
+        {   
+            title: "BigDataCorp",
+            role: "Jr. Software Engineer",
+            date: 'JAN 2026 - NOW',
+            task: [
+                "Stepping into a full-time role, I am now responsible for the user-facing Billing infrastructure, managing the complex data flows of contracts, invoices, and reports that drive our Sales and Finance operations.",
+                "This transition has shifted my focus toward strategic technical discovery, where I collaborate directly with internal leaders to transform high-level business needs into detailed architectural logic and proactive project scoping.",
+            ],
         }
     ]
     .reverse()
