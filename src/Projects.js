@@ -17,7 +17,7 @@ const Projects = () => {
         {
             title: 'yze-bio',
             photo: profileapp,
-            description: 'a "create your card" system, where the user can create profiles to display infos about himself, linking social medias and showing his favorite song and GIF. The design is fully customizable, allow the creator to change colors, fonts and positions of items on screen.',
+            description: 'a "create your card" system, where the user can create profiles to display infos about themselves, linking social medias and showing their favorite song and GIF. The design is fully customizable, allow the creator to change colors, fonts and positions of items on screen.',
             github: 'https://github.com/hugofolloni/yze-bio',
             link: 'https://yze.bio',
             tools: [
