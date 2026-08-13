@@ -6,11 +6,11 @@ const Studies = () => {
     const defaultTexts = [ 
         {
             title: "Universidade Federal do Rio de Janeiro",
-            role: "Computer Science",
+            role: "B.S. in Computer Science",
             date: 'FEB 2021 - NOV 2025',
             task: [
-                "I gained strong foundations in algorithms, data structures, and system design. Through coursework and projects, I have developed practical experience in software development and complex problem-solving.",
-                "My studies culminated in the development of a <a>capstone thesis</a> on a synchronous assessment module for educational platforms, showcasing my ability to lead a project from conception to completion. href=/thesis.pdf"
+                "Built a rigorous foundation in algorithms, data structures, and system design, translating academic theory into practical software engineering problem-solving.",
+                "Culminated studies with a capstone thesis on a synchronous assessment module for educational platforms, demonstrating end-to-end technical leadership and project execution. href=https://pantheon.ufrj.br/handle/11422/28387"
             ]    
         }
     ]
@@ -18,7 +18,6 @@ const Studies = () => {
 
     const [texts, setTexts] = useState(defaultTexts[0])
     const [current, setCurrent] = useState(0)
-
 
     return ( 
         <div className="table-wrapper">
@@ -46,12 +45,12 @@ const Studies = () => {
                             <span className="table-duration">{texts.date}</span>
                             <div className="table-all-tasks">
                                 {texts.task.map((value, index) => {
-                                    if (value.includes("<a>")) {
+                                    if (value.includes("href=")) {
                                         return (
                                             <span key={index} className="table-task">
-                                                {value.split('<a>')[0]}
-                                                    <a href={value.split('href=')[1]} target="_blank" rel="noreferrer" className="orange">{value.split('<a>')[1].split('</a>')[0]}</a>
-                                                {value.split('</a>')[1].split('href=')[0]}
+                                                {value.split('capstone thesis')[0]}
+                                                <a href={value.split('href=')[1]} target="_blank" rel="noreferrer" className="orange">capstone thesis</a>
+                                                {value.split('thesis')[1].split('href=')[0]}
                                             </span>
                                         )
                                     }
@@ -63,7 +62,7 @@ const Studies = () => {
                 </div>
             </Fade>
         </div> 
- );
+    );
 }
  
 export default Studies;

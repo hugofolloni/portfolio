@@ -4,20 +4,34 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import styled, {keyframes} from "styled-components";
 
-import wedding from './assets/wedding.png'
 import wiki from './assets/wiki.png'
 import multiverse from './assets/multiverse.png'
 import profileapp from './assets/profileapp.png'
-
-
+import vinyl from './assets/vinyl.png'
+import wedding from './assets/wedding.png'
 
 const Projects = () => {
 
     const projectsInfos = [
         {
+            title: 'vinyl-scrobbler',
+            photo: vinyl,
+            description: 'a full-stack ecosystem bridging physical vinyl playback with digital tracking. Built with a .NET 9 backend featuring Last.fm/Spotify OAuth integrations and an Amazon Alexa webhook for voice-activated scrobbling, paired with a dynamic React 19 web dashboard tracking playback in real time.',
+            github: 'https://github.com/hugofolloni/vinyl-scrobbler-api',
+            link: 'https://github.com/hugofolloni/vinyl-scrobbler-web',
+            tools: [
+                'C#',
+                '.NET 9',
+                'React 19',
+                'TypeScript',
+                'Last.fm API',
+                'Alexa Webhook'
+            ]
+        },
+        {
             title: 'yze-bio',
             photo: profileapp,
-            description: 'a "create your card" system, where the user can create profiles to display infos about themselves, linking social medias and showing their favorite song and GIF. The design is fully customizable, allow the creator to change colors, fonts and positions of items on screen.',
+            description: 'a fully customizable profile card system enabling users to display social links, favorite media, and custom themes with adjustable layout positioning and styling controls.',
             github: 'https://github.com/hugofolloni/yze-bio',
             link: 'https://yze.bio',
             tools: [
@@ -31,7 +45,7 @@ const Projects = () => {
         {
             title: 'spotify-multiverse',
             photo: multiverse,
-            description: "a full-stack application that helps users discover new songs based on a playlist they already love. Through mathematical analysis, the project extracts the essential elements of the user's favorite songs, enabling the search for other tracks that will also be appealing.",
+            description: "a full-stack music discovery engine that uses mathematical analysis to extract core audio features from a user's favorite playlist, running scikit-learn models to surface similar, appealing tracks.",
             github: 'https://github.com/hugofolloni/spotify-multiverse',
             link: 'https://spotify-multiverse.netlify.app',
             tools: [
@@ -47,7 +61,7 @@ const Projects = () => {
         {
             title: 'wiki-analysis',
             photo: wiki,
-            description: 'a final project for Algorithmic Linear Algebra. It aims to categorize Wikipedia articles based on their URL and similar articles using linear algebra comparisons. The project utilizes cosine similarity between article vectors to determine categories and improves efficiency by learning from requests.',
+            description: 'an algorithmic linear algebra project that categorizes Wikipedia articles based on URL and content vector similarities using cosine distance calculations, optimizing retrieval efficiency through request caching.',
             github: 'https://github.com/hugofolloni/wiki-analysis',
             link: 'https://wiki-analysis.netlify.app',
             tools: [
@@ -60,11 +74,14 @@ const Projects = () => {
                 "NumPy",
                 "Express"
             ]
-        },
+        }
+    ]
+
+    const minorProjects = [
         {
             title: 'wedding-gifts',
             photo: wedding,
-            description: 'a comprehensive web application with an API designed to streamline wedding gift management. Couples can easily add gifts to the list and track who has chosen to purchase each item. Guests have access to an organized list of gifts, allowing them to choose, purchase, and pay via an automatically generated PIX code.',
+            description: 'a comprehensive wedding gift manager and API allowing couples to curate registries while guests securely select, purchase items, and execute payments via automatically generated PIX codes.',
             github: 'https://github.com/hugofolloni/wedding-gifts',
             link: 'https://wedding-manager.netlify.app',
             tools: [
@@ -74,13 +91,10 @@ const Projects = () => {
                 'NodeJS',
                 'Express'
             ]
-        }
-    ]
-
-    const minorProjects = [
+        },
         {
             title: 'tagnalyzer',
-            description: 'a webapp that provides Last.fm users with detailed insights into their listening habits by analyzing the tags associated with their favorite artists.',
+            description: 'a web application providing Last.fm users with granular insights into their listening history by aggregating and analyzing artist tags.',
             github: 'https://github.com/hugofolloni/tagnalyzer',
             link: 'https://tagnalyzer.vercel.app',
             tools: [
@@ -93,7 +107,7 @@ const Projects = () => {
         },
         {
             title: 'react-stars-particles',
-            description: 'a captivating React component that brings a dynamic and interactive galaxy background to your web pages. With stars that are attracted to the mouse pointer and smooth animations, it offers a unique and engaging user experience.',
+            description: 'an interactive React component rendering a dynamic galaxy background with mouse-tracking particle animations and smooth scaling performance.',
             github: 'https://github.com/hugofolloni/react-stars-particles',
             link: 'https://galaxysimulator.netlify.app',
             tools: [
@@ -105,7 +119,7 @@ const Projects = () => {
         },
         {
             title: 'word.zzz',
-            description: 'a game where you try to guess the word based on your previous attempts, like wordle or term.ooo. It allows user to play non-stop, instead of daily playing like others.',
+            description: 'an endless-mode word-guessing game inspired by popular daily word puzzles, allowing users to play continuously without daily restrictions.',
             github: 'https://github.com/hugofolloni/word.zzz',
             link: 'https://wordzzz.netlify.app',
             tools: [
@@ -116,7 +130,7 @@ const Projects = () => {
         },
         {
             title: 'anigme',
-            description: 'a game to guess who is the anime character behind the blur photo. It uses a public API to select the character and changes it every day.',
+            description: 'a daily character-guessing game utilizing public APIs and Python processing scripts to serve randomized blurred anime portraits.',
             github: 'https://github.com/hugofolloni/anigme',
             link: 'https://anigme.netlify.app',
             tools: [
@@ -128,7 +142,7 @@ const Projects = () => {
         },
         {
             title: 'stockglass',
-            description: 'an implementation of a chess game with Pygame, featuring classes for the game, pieces, and the board. It utilizes algorithms to make computer moves. The game logic manages moves, checks, and interactions, while the graphical interface displays the board and allows interactive gameplay.',
+            description: 'a fully functional chess engine implemented in Python using Pygame, incorporating custom rule validation logic and move-prediction algorithms.',
             github: 'https://github.com/hugofolloni/wiki-analysis',
             link: '',
             tools: [
@@ -139,7 +153,7 @@ const Projects = () => {
         },
         {
             title: 'heyo-discord-bot',
-            description: 'an interactive bot for Discord that allows users to listen to music, play some games and get infos about weather and space missions.',
+            description: 'an interactive utility bot for Discord supporting audio playback, minigames, live weather tracking, and space mission updates.',
             github: 'https://github.com/hugofolloni/heyo-discord-bot',
             link: '',
             tools: [
@@ -157,7 +171,7 @@ const Projects = () => {
                     <div className="projects-area">
                         {
                             projectsInfos.map((item, index) => (
-                                <div className="project-container">
+                                <div className="project-container" key={index}>
                                     {   (index % 2 === 0 
                                             &&
                                         <LeftProject item={item}/>)
@@ -190,7 +204,8 @@ const LeftProject = (props) => {
         justify-content: center;
         padding: 10px;
         font-size: 16px;
-        `
+        white-space: nowrap;
+    `
         
     const [size, setSize] = useState(0)
     const scroll = keyframes`
@@ -207,12 +222,13 @@ const LeftProject = (props) => {
     `       
 
     useEffect(() => {
-        var size = 15;
+        if (!ref.current) return;
+        var calculatedSize = 15;
         for(let i = 0; i < ref.current.children.length / 2; i++){
-            size += ref.current.children[i].offsetWidth
-            size += 7
+            calculatedSize += ref.current.children[i].offsetWidth
+            calculatedSize += 7
         }
-        setSize(size)
+        setSize(calculatedSize)
         setSpeed(ref.current.children.length)
     }, [])
 
@@ -236,11 +252,11 @@ const LeftProject = (props) => {
                 </div>
                 <div className="left-project-tools">
                     <SlideTrack ref={ref}>
-                        {item.tools.map((item) => (
-                            <Tool>{item}</Tool>
+                        {item.tools.map((tool, idx) => (
+                            <Tool key={idx}>{tool}</Tool>
                         ))}
-                        {item.tools.map((item) => (
-                            <Tool>{item}</Tool>
+                        {item.tools.map((tool, idx) => (
+                            <Tool key={`dup-${idx}`}>{tool}</Tool>
                         ))}
                     </SlideTrack>
                 </div>
@@ -263,14 +279,13 @@ const RightProject = (props) => {
         justify-content: center;
         padding: 10px;
         font-size: 16px;
-        `
+    `
         
     const [size, setSize] = useState(0)
     const scroll = keyframes`
         0% { transform: translateX(0px); }
         100% { transform: translateX(${size}px)}
     `
-
 
     const [speed, setSpeed] = useState(10)
     const SlideTrack = styled.div`
@@ -281,17 +296,17 @@ const RightProject = (props) => {
     `       
 
     useEffect(() => {
-        var size = 15;
+        if (!ref.current) return;
+        var calculatedSize = 15;
         for(let i = 0; i < ref.current.children.length / 2; i++){
-            size += ref.current.children[i].offsetWidth
-            size += 7
+            calculatedSize += ref.current.children[i].offsetWidth
+            calculatedSize += 7
         }
-        setSize(size)
+        setSize(calculatedSize)
         setSpeed(ref.current.children.length)
     }, [])
 
     const item = props.item;
-    console.log(item)
     return (
         <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"}> 
             <div className="right-project">
@@ -310,16 +325,16 @@ const RightProject = (props) => {
                 </div>
                 <div className="right-project-tools">
                     <SlideTrack ref={ref}>
-                        {item.tools.map((item) => (
-                            <Tool>{item}</Tool>
+                        {item.tools.map((tool, idx) => (
+                            <Tool key={idx}>{tool}</Tool>
                         ))}
-                        {item.tools.map((item) => (
-                            <Tool>{item}</Tool>
+                        {item.tools.map((tool, idx) => (
+                            <Tool key={`dup-${idx}`}>{tool}</Tool>
                         ))}
                     </SlideTrack>
                 </div>
             </div>
-    </Fade> 
+        </Fade> 
     )
 }
 
@@ -329,7 +344,7 @@ const MinorProjects = (props) => {
     return (
         <div className="minor-projects-area">
             {props.projects.map((item, index) => (
-                <div className="minor-project">
+                <div className="minor-project" key={index}>
                     <div className="minor-project-title"  onClick={() => {
                             if(index !== minorProjectIndex){
                                 setMinorProjectIndex(index);
@@ -347,8 +362,8 @@ const MinorProjects = (props) => {
                             <span className='minor-project-description'>{item.description}</span>
                             <div className="minor-projects-footer">
                                 <div className="minor-projects-tools">
-                                    {item.tools.map((item) => (
-                                        <div className='tool'>{item}</div>
+                                    {item.tools.map((tool, idx) => (
+                                        <div className='tool' key={idx}>{tool}</div>
                                     ))}
                                 </div>
                                 <div className="minor-projects-links">

@@ -24,15 +24,15 @@ const About = () => {
             <Fade direction='down' fraction={0.3}>
                 <div className="about">
                     <h2 className="title">~ about-me</h2>
-                    <span className="bio">I'm a brazilian <strong className='orange'>software engineer</strong> with over 3 years of experience building robust applications. Based in Rio de Janeiro, I'm driven by curiosity and a passion for solving complex problems through technology.</span>
-                    <span className="bio">I hold a Computer Science degree from the <a href='https://internacional.ufrj.br/en/study-at-ufrj' target="_blank" rel='noreferrer' className='orange'>Universidade Federal do Rio de Janeiro (UFRJ)</a>. Currently, I am a Software Engineer at <a href='https://bigdatacorp.com.br/sobre-a-bigdatacorp' target="_blank" rel='noreferrer' className='orange'>BigDataCorp</a>, where I lead the development of user-facing billing and financial systems. My background is rooted in scientific research with <strong className='orange'>COPPETEC</strong> and <strong className='orange'>UFRJ</strong>, where I solved complex challenges in data management and educational technology.</span>                   
-                    <span className="bio">My technical skills include:</span>
+                    <span className="bio">I'm a Brazilian <strong className='orange'>software engineer</strong> with over 3 years of experience building robust and scalable applications. Based in Rio de Janeiro, I'm driven by a passion for system architecture, clean code, and solving complex problems through technology.</span>
+                    <span className="bio">I hold a Computer Science degree from the <a href='https://internacional.ufrj.br/en/study-at-ufrj' target="_blank" rel='noreferrer' className='orange'>Universidade Federal do Rio de Janeiro (UFRJ)</a>. Currently, I am a Software Engineer at <a href='https://bigdatacorp.com.br/sobre-a-bigdatacorp' target="_blank" rel='noreferrer' className='orange'>BigDataCorp</a>, where I contribute to the architecture and development of core billing and monetization systems, taking ownership of front-end and back-end features for our internal systems. My background also includes scientific research with <strong className='orange'>COPPETEC</strong> and <strong className='orange'>UFRJ</strong>, tackling large-scale data pipelines and educational technology.</span>                   
+                    <span className="bio">Core technologies I work with:</span>
                     <div className="techs">
                         {techs.map(tech => (
                             <span>{tech}</span>
                         ))}
                     </div>
-                    <span className="bio" style={{marginTop: '10px'}}>Beyond coding, I am a native Portuguese speaker, fluent in English, and currently learning Italian. In my free time, I enjoy playing the guitar and gaming (Valorant, Chess, and League of Legends).</span>
+                    <span className="bio" style={{marginTop: '10px'}}>Beyond coding, I am a native Portuguese speaker, fluent in English (C2), and currently learning Italian. In my free time, I enjoy playing the guitar and gaming (Valorant, Chess, and League of Legends).</span>
                 </div>
             </Fade>
             <Parallax className="photos" speed={-17}>
