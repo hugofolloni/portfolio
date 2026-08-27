@@ -1,5 +1,6 @@
 import { Fade } from "react-awesome-reveal";
-import { useState } from "react"
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Experience = () => {
 
@@ -44,8 +45,8 @@ const Experience = () => {
     ]
     .reverse()
 
-    const [texts, setTexts] = useState(defaultTexts[0])
-    const [current, setCurrent] = useState(0)
+    const [current, setCurrent] = useState(0);
+    const texts = defaultTexts[current];
 
     return ( 
         <div className="table-wrapper">
@@ -53,44 +54,59 @@ const Experience = () => {
                 <div className="xp">
                     <h2 className="title">~ experience</h2>
                     <div className="jobs-area">
-                        <div className="selector">
-                            { defaultTexts.map((item, index) => (
-                                (
-                                    current === index && (
-                                        <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="items-selected"><span>{item.title}</span></div>
-                                    )
-                                )
-                                || 
-                                (
-                                    <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="items">
+                        <div className="selector" style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            {defaultTexts.map((item, index) => {
+                                const isSelected = current === index;
+                                return (
+                                    <div 
+                                        key={index}
+                                        onClick={() => setCurrent(index)} 
+                                        className="items"
+                                        style={{ cursor: 'pointer', position: 'relative', zIndex: 1, padding: '10px 14px' }}
+                                    >
+                                        {isSelected && (
+                                            <motion.div
+                                                layoutId="experience-pill"
+                                                style={{
+                                                    position: 'absolute',
+                                                    inset: 0,
+                                                    zIndex: -1,
+                                                    borderRight: '3px solid #ff5f00'
+                                                }}
+                                                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                                            />
+                                        )}
                                         <span>{item.title}</span>
                                     </div>    
-                                )      
-                            ))}
+                                )
+                            })}
                         </div>
                         <div className="table-infos">
-                            <span className='table-title'><strong>{texts.role}</strong> <strong className="orange">@ {texts.title}</strong></span>
-                            <span className="table-duration">{texts.date}</span>
-                            <div className="table-all-tasks">
-                                {texts.task.map((value, index) => {
-                                    if (value.includes("href=")) {
-                                        return (
-                                            <span key={index} className="table-task">
-                                                {value.split('co-authored')[0]}
-                                                <a href={value.split('href=')[1]} target="_blank" rel="noreferrer" className="orange">co-authored a peer-reviewed paper</a>
-                                                {value.split('paper')[1].split('href=')[0]}
-                                            </span>
-                                        )
-                                    }
-                                    return <span key={index} className="table-task">{value}</span>
-                                })}
-                            </div>
+                            <Fade key={current} triggerOnce direction="up" duration={300} cascade damping={0.12}>
+                                <span className='table-title'><strong>{texts.role}</strong> <strong className="orange">@ {texts.title}</strong></span>
+                                <span className="table-duration">{texts.date}</span>
+                                <div className="table-all-tasks">
+                                    {texts.task.map((value, index) => {
+                                        if (value.includes("href=")) {
+                                            return (
+                                                <span key={index} className="table-task">
+                                                    {value.split('co-authored')[0]}
+                                                    <a href={value.split('href=')[1]} target="_blank" rel="noreferrer" className="orange">co-authored a peer-reviewed paper</a>
+                                                    {value.split('paper')[1].split('href=')[0]}
+                                                </span>
+                                            )
+                                        }
+                                        return <span key={index} className="table-task">{value}</span>
+
+                                    })}
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
             </Fade>
         </div> 
     );
-}
+};
  
 export default Experience;

@@ -330,10 +330,7 @@ a {
   width: 100%;
   justify-content: flex-start;
   cursor: pointer;
-}
-
-.items-selected {
-  border-right: 1px solid #ff5f00;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.1s ease;
 }
 
 .items-selected span {
@@ -346,7 +343,6 @@ a {
 }
 
 .studies .items-selected {
-  border-left: 1px solid #ff5f00;
   border-right: none;
 }
 
@@ -356,6 +352,7 @@ a {
 
 .items:hover span, .items-selected:hover span{
   color: #ff5f00;
+  transform: translateX(4px);
 }
 
 .table-infos {
@@ -365,6 +362,7 @@ a {
   border-radius: 0px 12px 12px 0px;
   display: flex;
   flex-direction: column;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .table-title {
@@ -685,6 +683,10 @@ a {
   margin-top: 170px;
 }
 
+.line-div {
+  width: 70%;
+   margin-bottom: 10px;
+}
 /* 0D0024 111144 112255 113366 114477 */
 
 @media screen and (max-width: 1200px){
@@ -778,7 +780,7 @@ a {
 
   .selector {
     flex-direction: row;
-    overflow: auto;
+    overflow: hidden;
     width: 85vw;
   }
 
@@ -802,8 +804,8 @@ a {
   }
   
   .items-selected {
-    border-bottom: 1px solid #ff5f00;
-    border-left: none;
+    /* border-bottom: 1px solid #ff5f00; */
+    border: none
   }
 
   .contact-wrapper {
@@ -928,5 +930,8 @@ a {
     margin: 3%;
     justify-content: flex-end;
   }
-
+  
+  .fade-div, .line-div {
+    width: 100%;
+  }
 }

@@ -21,20 +21,30 @@ const About = () => {
     return ( 
         <div className="session-wrapper">
             <ParallaxProvider>
-            <Fade direction='down' fraction={0.3}>
-                <div className="about">
+            <div className="about">
+                <Fade direction='down' duration={600} className='line-div'>
                     <h2 className="title">~ about-me</h2>
+                </Fade>
+                <Fade direction='down' duration={600} delay={150} className='line-div'>
                     <span className="bio">I'm a Brazilian <strong className='orange'>software engineer</strong> with over 3 years of experience building robust and scalable applications. Based in Rio de Janeiro, I'm driven by a passion for system architecture, clean code, and solving complex problems through technology.</span>
+                </Fade>
+                <Fade direction='down' duration={600} delay={300} className='line-div'>
                     <span className="bio">I hold a Computer Science degree from the <a href='https://internacional.ufrj.br/en/study-at-ufrj' target="_blank" rel='noreferrer' className='orange'>Universidade Federal do Rio de Janeiro (UFRJ)</a>. Currently, I am a Software Engineer at <a href='https://bigdatacorp.com.br/sobre-a-bigdatacorp' target="_blank" rel='noreferrer' className='orange'>BigDataCorp</a>, where I contribute to the architecture and development of core billing and monetization systems, taking ownership of front-end and back-end features for our internal systems. My background also includes scientific research with <strong className='orange'>COPPETEC</strong> and <strong className='orange'>UFRJ</strong>, tackling large-scale data pipelines and educational technology.</span>                   
+                </Fade>
+                <Fade direction='down' duration={600} delay={450} className='line-div'>
                     <span className="bio">Core technologies I work with:</span>
+                </Fade>
+                <Fade direction='down' duration={600} delay={600} className='line-div'>
                     <div className="techs">
                         {techs.map(tech => (
-                            <span>{tech}</span>
+                            <span key={tech}>{tech}</span>
                         ))}
                     </div>
+                </Fade>
+                <Fade direction='down' duration={600} delay={750} className='line-div'>
                     <span className="bio" style={{marginTop: '10px'}}>Beyond coding, I am a native Portuguese speaker, fluent in English (C2), and currently learning Italian. In my free time, I enjoy playing the guitar and gaming (Valorant, Chess, and League of Legends).</span>
-                </div>
-            </Fade>
+                </Fade>
+            </div>
             <Parallax className="photos" speed={-17}>
                 <div className="ball" style={{bottom: 0, left: 0, marginBottom: '-50px', marginLeft: '-50px', zIndex: randomZ}}/>
                 <div className="ball" style={{top: 0, right: 0, marginTop: '-50px', marginRight: '-50px', zIndex: randomZ * -1}}/>

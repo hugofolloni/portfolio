@@ -1,5 +1,6 @@
 import { Fade } from "react-awesome-reveal";
-import { useState } from "react"
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Studies = () => {
 
@@ -16,8 +17,8 @@ const Studies = () => {
     ]
     .reverse()
 
-    const [texts, setTexts] = useState(defaultTexts[0])
-    const [current, setCurrent] = useState(0)
+    const [current, setCurrent] = useState(0);
+    const texts = defaultTexts[current];
 
     return ( 
         <div className="table-wrapper">
@@ -25,38 +26,52 @@ const Studies = () => {
                 <div className="studies">
                     <h2 className="title">~ studies</h2>
                     <div className="studies-area">
-                        <div className="selector">
-                            { defaultTexts.map((item, index) => (
-                                (
-                                    current === index && (
-                                        <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="items-selected"><span>{item.title}</span></div>
-                                    )
-                                )
-                                || 
-                                (
-                                    <div onClick={() => {setTexts(defaultTexts[index]); setCurrent(index)}} className="items">
-                                        <span>{item.title}</span>
+                        <div className="selector" style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            {defaultTexts.map((item, index) => {
+                                const isSelected = current === index;
+                                return (
+                                    <div 
+                                        key={index}
+                                        onClick={() => setCurrent(index)} 
+                                        className="items"
+                                        style={{ cursor: 'pointer', position: 'relative', zIndex: 1, padding: '10px 14px' }}
+                                    >
+                                        {isSelected && (
+                                            <motion.div
+                                                layoutId="studies-pill"
+                                                style={{
+                                                    position: 'absolute',
+                                                    inset: 0,
+                                                    zIndex: -1,
+                                                    borderLeft: '3px solid #ff5f00',
+                                                }}
+                                                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                                            />
+                                        )}
+                                        <span style={{paddingLeft: '10px'}}>{item.title}</span>
                                     </div>    
-                                )      
-                            ))}
+                                )
+                            })}
                         </div>
                         <div className="table-infos">
-                            <span className='table-title'><strong>{texts.role}</strong> <strong className="orange">@ {texts.title}</strong></span>
-                            <span className="table-duration">{texts.date}</span>
-                            <div className="table-all-tasks">
-                                {texts.task.map((value, index) => {
-                                    if (value.includes("href=")) {
-                                        return (
-                                            <span key={index} className="table-task">
-                                                {value.split('capstone thesis')[0]}
-                                                <a href={value.split('href=')[1]} target="_blank" rel="noreferrer" className="orange">capstone thesis</a>
-                                                {value.split('thesis')[1].split('href=')[0]}
-                                            </span>
-                                        )
-                                    }
-                                    return <span key={index} className="table-task">{value}</span>
-                                })}
-                            </div>
+                            <Fade key={current} triggerOnce direction="up" duration={300} cascade damping={0.12}>
+                                <span className='table-title'><strong>{texts.role}</strong> <strong className="orange">@ {texts.title}</strong></span>
+                                <span className="table-duration">{texts.date}</span>
+                                <div className="table-all-tasks">
+                                    {texts.task.map((value, index) => {
+                                        if (value.includes("href=")) {
+                                            return (
+                                                <span key={index} className="table-task">
+                                                    {value.split('capstone thesis')[0]}
+                                                    <a href={value.split('href=')[1]} target="_blank" rel="noreferrer" className="orange">capstone thesis</a>
+                                                    {value.split('thesis')[1].split('href=')[0]}
+                                                </span>
+                                            )
+                                        }
+                                        return <span key={index} className="table-task">{value}</span>
+                                    })}
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>

@@ -167,7 +167,9 @@ const Projects = () => {
     return ( 
         <div className="projects-wrapper" style={{overflow: 'hidden'}}>
                 <div className="projects">
-                    <h2 className="title">~ projects</h2>
+                    <Fade direction='down' triggerOnce>
+                        <h2 className="title">~ projects</h2>
+                    </Fade>
                     <div className="projects-area">
                         {
                             projectsInfos.map((item, index) => (
@@ -235,7 +237,7 @@ const LeftProject = (props) => {
     const item = props.item;
 
     return (
-        <Fade style={{width: '100%', height:'100%'}} direction='right' distance={"30px"}> 
+        <Fade style={{width: '100%', height:'100%'}} direction='right' distance={"30px"} triggerOnce> 
             <div className="left-project">
                 <div className="project-image-wrapper"><img src={item.photo} alt="" /><div className="grainy"/></div>
                 <div className="left-project-description">
@@ -308,7 +310,7 @@ const RightProject = (props) => {
 
     const item = props.item;
     return (
-        <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"}> 
+        <Fade style={{width: '100%', height:'100%'}} direction='left' distance={"30px"} triggerOnce> 
             <div className="right-project">
                 <div className="project-image-wrapper"><img src={item.photo} alt="" /><div className="grainy"/></div>
                 <div className="right-project-description">
@@ -344,43 +346,44 @@ const MinorProjects = (props) => {
     return (
         <div className="minor-projects-area">
             {props.projects.map((item, index) => (
-                <div className="minor-project" key={index}>
-                    <div className="minor-project-title"  onClick={() => {
-                            if(index !== minorProjectIndex){
-                                setMinorProjectIndex(index);
-                            }
-                            else {
-                                setMinorProjectIndex()
-                            }
-                        }}>
-                        <span className='orange'>{item.title}</span>
-                        { (index === minorProjectIndex && <span className="orange">-</span>) || <div className="orange">+</div>}
-                    </div>
-                    { index === minorProjectIndex && (
-                    <Fade direction="down" duration={500}>
-                        <div className="minor-project-expand">
-                            <span className='minor-project-description'>{item.description}</span>
-                            <div className="minor-projects-footer">
-                                <div className="minor-projects-tools">
-                                    {item.tools.map((tool, idx) => (
-                                        <div className='tool' key={idx}>{tool}</div>
-                                    ))}
-                                </div>
-                                <div className="minor-projects-links">
-                                    {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
-                                        <LaunchIcon className='icon'/>          
-                                    </a>}
-                                    {item.github !== "" && <a href={item.github} target='_blank' rel='noreferrer'>
-                                        <GitHubIcon className='icon'/>          
-                                    </a>}
+                <Fade key={index} direction="down" delay={index * 100} className='fade-div'>
+                    <div className="minor-project">
+                        <div className="minor-project-title"  onClick={() => {
+                                if(index !== minorProjectIndex){
+                                    setMinorProjectIndex(index);
+                                }
+                                else {
+                                    setMinorProjectIndex()
+                                }
+                            }}>
+                            <span className='orange'>{item.title}</span>
+                            { (index === minorProjectIndex && <span className="orange">-</span>) || <div className="orange">+</div>}
+                        </div>
+                        { index === minorProjectIndex && (
+                        <Fade direction="down" duration={300}>
+                            <div className="minor-project-expand">
+                                <span className='minor-project-description'>{item.description}</span>
+                                <div className="minor-projects-footer">
+                                    <div className="minor-projects-tools">
+                                        {item.tools.map((tool, idx) => (
+                                            <div className='tool' key={idx}>{tool}</div>
+                                        ))}
+                                    </div>
+                                    <div className="minor-projects-links">
+                                        {item.link !== "" && <a href={item.link} target='_blank' rel='noreferrer'>
+                                            <LaunchIcon className='icon'/>          
+                                        </a>}
+                                        {item.github !== "" && <a href={item.github} target='_blank' rel='noreferrer'>
+                                            <GitHubIcon className='icon'/>          
+                                        </a>}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Fade>
-                    )}
-                </div>
-            ))
-        }
+                        </Fade>
+                        )}
+                    </div>
+                </Fade>
+            ))}
         </div>
     )
 }

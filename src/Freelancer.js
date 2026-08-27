@@ -1,7 +1,7 @@
+import { Fade } from "react-awesome-reveal";
 import LaunchIcon from '@mui/icons-material/Launch';
 
 const Freelancer = () => {
-
     const projects = [
         {
             title: "Instituto de Proteção ao Jogador",
@@ -20,15 +20,19 @@ const Freelancer = () => {
     return ( 
         <div className="projects-wrapper">
             <div className="freelancer-projects" >
-                <h2 className="title">~ freelancer</h2>
+                <Fade direction='down' triggerOnce>
+                    <h2 className="title">~ freelancer</h2>
+                </Fade>
                 <div className="minor-projects-area">
-                    {projects.map((item) => (
-                        <div className="minor-project">
-                            <div className="minor-project-title" style={{cursor: 'default'}}>
-                                <span className='orange' style={{color: '#d3d3d5', cursor: 'default'}}>{item.title}</span>
-                                <a href={item.link} target='_blank' rel='noreferrer'><LaunchIcon className='icon'/></a>
+                    {projects.map((item, index) => (
+                        <Fade key={index} direction='up' delay={index * 150} className='fade-div'>
+                            <div className="minor-project">
+                                <div className="minor-project-title" style={{cursor: 'default'}}>
+                                    <span className='orange' style={{color: '#d3d3d5', cursor: 'default'}}>{item.title}</span>
+                                    <a href={item.link} target='_blank' rel='noreferrer'><LaunchIcon className='icon'/></a>
+                                </div>
                             </div>
-                        </div>
+                        </Fade>
                     ))}          
                 </div>          
             </div>
