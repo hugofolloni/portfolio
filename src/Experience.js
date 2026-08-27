@@ -27,8 +27,8 @@ const Experience = () => {
             role: "Software Engineer Intern",
             date: "JUN 2024 - DEC 2025",
             task: [
-                "Developed and modernized full-stack solutions on the Billing & Monetization team, building administrative panels using .NET APIs and responsive React components.",
-                "Contributed to a major platform modernization effort by refactoring legacy code and migrating UI components to a maintainable React and Redux architecture."
+                "Developed and modernized full-stack internal solutions, implementing automated Purchase Order systems that streamlined workflows and eliminated manual ERP checks for the Finance team.",
+                "Played a key role in a major platform modernization, migrating core UI components to React 18 and backend routes to .NET 8, significantly improving system maintainability and developer productivity."
             ]
         },
         {   
@@ -37,7 +37,8 @@ const Experience = () => {
             date: 'JAN 2026 - NOW',
             task: [
                 "Took on technical ownership of the core billing and monetization ecosystem, architecting internal web applications and REST APIs serving executive leadership, Sales, and Finance operations.",
-                "Engineered scalable full-stack features handling high-volume multi-client data flows, translating complex financial logic into clean, intuitive experiences using .NET, C#, and React.",
+                "Spearheaded the architectural shift to a new Price Tables model supporting 5,000+ enterprise clients and 10,000+ contracts, successfully scaling the core billing and monetization ecosystem.",
+                "Implemented a proactive caching layer that reduced data retrieval times by up to 90%, and achieved 100% automated test coverage for the core API by establishing internal TDD protocols.",
             ],
         }
     ]
