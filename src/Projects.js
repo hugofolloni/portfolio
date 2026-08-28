@@ -17,8 +17,8 @@ const Projects = () => {
             title: 'vinyl-scrobbler',
             photo: vinyl,
             description: 'a full-stack ecosystem bridging physical vinyl playback with digital tracking. Built with a .NET 9 backend featuring Last.fm/Spotify OAuth integrations and an Amazon Alexa webhook for voice-activated scrobbling, paired with a dynamic React 19 web dashboard tracking playback in real time.',
-            github: 'https://github.com/hugofolloni/vinyl-scrobbler-api',
-            link: 'https://github.com/hugofolloni/vinyl-scrobbler-web',
+            github: 'https://github.com/hugofolloni/vinyl-scrobbler',
+            link: 'https://vinylscrobbler.netlify.app',
             tools: [
                 'C#',
                 '.NET 9',
